@@ -1,0 +1,17 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+p {
+  margin : 0;
+  padding: 10;
+}
+
+h1{
+  margin-top : 10 ;
+}
