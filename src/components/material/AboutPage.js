@@ -1,18 +1,15 @@
 import React from 'react'
 import profImg from '../../../public/img/profile.jpg'
 import loremIpsum from 'lorem-ipsum'
+import MediaQuery from 'react-responsive'
 
 const profImgStyle = {
   width: '150px',
   height: '150px',
-  borderRadius: '50%'
+  borderRadius: '50%', 
+  margin : '30px'
 }
 
-const imgDivStyle = {
-  width: 'auto',
-  height : '150px',
-  margin: '30px'
-}
 
 const contentDivStyle = {
   fontFamily : 'Roboto',
@@ -24,16 +21,12 @@ function AboutPage() {
 
   return (
     <div style={{ display: 'flex' }}>
-      
-      <div style={imgDivStyle}>
 
         <img src= {profImg}
           style={profImgStyle}
           alt={"profile image"}
-          className='img-prof-responsive' />
-        
-      </div >
-
+          className='img-prof-responsive' />      
+      
       <div style={contentDivStyle}>
         <p>
         {loremIpsum({count:25})}  
