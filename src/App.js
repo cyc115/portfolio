@@ -8,7 +8,7 @@ import './App.css';
 
 
 const appStyle = {
-  width: '70%',
+  'max-width': '1100px',
   textAlign: 'center',
   margin : 'auto'
 }

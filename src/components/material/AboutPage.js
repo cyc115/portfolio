@@ -9,29 +9,31 @@ const profImgStyle = {
 }
 
 const imgDivStyle = {
-  flow: 'left',
-  //backgroundColor: 'pink',
-  margin : '30px'
+  width: 'auto',
+  height : '150px',
+  margin: '30px'
 }
 
 const contentDivStyle = {
   fontFamily : 'Roboto',
   minHeight: '150px',
-
-  margin : '30px',
-  
+  margin : '30px'
 }
 
 function AboutPage() {
 
   return (
-    <div style={{display : 'flex'}}>
+    <div style={{ display: 'flex' }}>
+      
       <div style={imgDivStyle}>
+
         <img src= {profImg}
           style={profImgStyle}
           alt={"profile image"}
-          className='img-prof-responsive'/>
+          className='img-prof-responsive' />
+        
       </div >
+
       <div style={contentDivStyle}>
         <p>
         {loremIpsum({count:25})}  
