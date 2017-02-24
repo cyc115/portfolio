@@ -2,6 +2,8 @@
 import React from 'react'
 import { Tabs, Tab } from 'material-ui/Tabs'
 import SwipeableViews from 'react-swipeable-views'
+import Page from './Page'
+import AboutPage from './AboutPage'
 
 class TabsContainer extends React.Component {
 
@@ -30,6 +32,8 @@ class TabsContainer extends React.Component {
       'INTEREST',
       'CONTACT'
     ]
+
+    this.generateAboutPageContent = this.generateAboutPageContent.bind(this)
   }
 
   handleChange = (v) => {
@@ -37,11 +41,11 @@ class TabsContainer extends React.Component {
       ...this.state,
       slideIndex: v
     })
-    console.dir(`changed idx to : ${this.state.slideIndex}` );
+    console.dir(`changed idx to : ${this.state.slideIndex}`);
   }
 
   genTabs = (labels) => {
-    return (labels.map( (v, i) => <Tab label={v} value={i}/>))
+    return (labels.map((v, i) => <Tab label={v} value={i} key={v} />))
   }
 
   render() {
@@ -56,10 +60,12 @@ class TabsContainer extends React.Component {
         <SwipeableViews
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange} >
-          <div style={{...this.styles.slide }}>
-            <h2>UNDER CONSTRUCTION</h2>
-          </div>
-          <div style={{...this.styles.slide }}>
+
+          <Page>
+            {this.generateAboutPageContent()}
+          </Page>
+
+          <div style={{ ...this.styles.slide }}>
             <h2>UNDER CONSTRUCTION</h2>
           </div>
           <div>
@@ -71,8 +77,20 @@ class TabsContainer extends React.Component {
           <div>
             <h2>slide1</h2>
           </div>
+
+
         </SwipeableViews>
       </div>
+    )
+  }
+
+  generateAboutPageContent() {
+    return <AboutPage/>
+  }
+
+  generatePortfolio() {
+    return (
+      <div></div>
     )
   }
 }
