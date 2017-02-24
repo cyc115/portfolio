@@ -20,7 +20,7 @@ const footerStyle = {
 class Footer extends React.Component {
   constructor(props) {
     super(props)
-    this.iconSize = '1x'
+    this.iconSize = '1'
     this.iconList = [
       this.createSiteObject('github', 'http://www.github.com/cyc115'),
       this.createSiteObject('stack-overflow', 'http://stackoverflow.com/users/1272013/cyc115'),
@@ -54,7 +54,7 @@ class Footer extends React.Component {
   render() {
     return (
       <div style={footerStyle}>
-        {this.iconList.map( icon => this.createIcon(icon, '1x', iconStyle)) }
+        {this.iconList.map( icon => this.createIcon(icon, this.iconSize, iconStyle)) }
       </div>
     )
   }
