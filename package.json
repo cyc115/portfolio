@@ -2,7 +2,6 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://cyc115.github.io/portfolio",
   "devDependencies": {
     "@kadira/storybook": "^2.21.0",
     "gh-pages": "^0.12.0"
