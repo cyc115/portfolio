@@ -4,6 +4,7 @@ import { Tabs, Tab } from 'material-ui/Tabs'
 import SwipeableViews from 'react-swipeable-views'
 import Page from './Page'
 import AboutPage from './AboutPage'
+import ResumePage from './ResumePage'
 
 class TabsContainer extends React.Component {
 
@@ -65,9 +66,10 @@ class TabsContainer extends React.Component {
             {this.generateAboutPageContent()}
           </Page>
 
-          <div style={{ ...this.styles.slide }}>
-            <h2>UNDER CONSTRUCTION</h2>
-          </div>
+          <Page>
+            <ResumePage/>
+          </Page>
+
           <div>
             <h2>slide1</h2>
           </div>
