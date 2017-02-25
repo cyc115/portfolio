@@ -14,24 +14,45 @@ class Experiences extends React.Component {
     this.onMouseOver = this.onMouseOver.bind(this)
 
   }
+  /*
+    onMouseOver(time) {
+      if (this.state.restoreDepthTimerID === -1) {
+        this.setState({ zDepth: this.props.focused })
+      }
+      else {
+        clearTimeout(this.state.restoreDepthTimerID)
+      }
+      let id = setTimeout(() => {
+        this.setState({
+          zDepth: this.props.unfocused,
+          restoreDepthTimerID: -1 
+        })
+      }, time)
+      this.setState({ restoreDepthTimerID: id })
+  
+    }
+  
+  */
 
   onMouseOver(time) {
     if (this.state.restoreDepthTimerID === -1) {
-      this.setState({ zDepth: this.props.focused })
-    }
-    else {
-      clearTimeout(this.state.restoreDepthTimerID)
-    }
-    let id = setTimeout(() => {
+
+      let id = setTimeout(() => {
+        this.setState({
+          zDepth: this.props.unfocused,
+          restoreDepthTimerID: -1
+        })
+      }, time)
+
       this.setState({
-        zDepth: this.props.unfocused,
-        restoreDepthTimerID: -1
+        zDepth: this.props.focused,
+        restoreDepthTimerID: id
       })
-    }, time)
-    this.setState({ restoreDepthTimerID: id })
+    }
+
+
 
   }
-
   render() {
     const {
       focused = 3,
@@ -58,7 +79,7 @@ class Experiences extends React.Component {
       }}
         zDepth={this.state.zDepth}
         onMouseOver={this.onMouseOver(300)}
-        onTouchTap={this.onMouseOver(500)}
+      //onTouchTap={this.onMouseOver(500)}
       >
         <div style={{
           width: '30%',
