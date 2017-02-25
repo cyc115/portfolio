@@ -32,11 +32,14 @@ function AboutPage() {
       {
         (matches) => {
           let imgStyle = matches ?
-            { ...profImgStyle, ...profImgWideStyle } :
-            { ...profImgStyle, ...profImgThinStyle }
+            { ...profImgStyle, ...profImgWideStyle } :  //more than 1000
+            { ...profImgStyle, ...profImgThinStyle }    //less than 1000
           
           let imgDivStyle = matches ? 
             { height: '500px', float: 'left' } : {height : 'auto'}
+
+          const contentStyle = matches ? 
+          contentDivStyle : {...contentDivStyle, margin : '0 -25 0 -25'}  
 
           return (
             <div>
@@ -46,7 +49,7 @@ function AboutPage() {
                   alt={"profile image"}
                   className='img-prof-responsive' />
               </div>
-              <div style={contentDivStyle}>
+              <div style={contentStyle}>
                 <p>
                   {loremIpsum({ count: 25 })}
                 </p>

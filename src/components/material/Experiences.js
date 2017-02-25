@@ -57,6 +57,8 @@ class Experiences extends React.Component {
         //onTouchTap={this.onMouseOver(500)}
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
+        onTouchStart={this.onMouseEnter}
+        onMouseEnd={this.onMouseLeave}  
       >
         <div style={{
           width: '30%',

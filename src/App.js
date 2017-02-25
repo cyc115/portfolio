@@ -13,13 +13,20 @@ const appStyle = {
   margin : 'auto'
 }
 
+const footerStyle = {
+  position: 'fixed',
+  top: '90%',
+  left : '46%',
+  margin: '15px',  
+}
+
 class App extends Component {
   render() {
     return (
       <div className="App" style={appStyle}>
         <h1 className='name-title'>Mike Chen</h1>
         <TabsContainer />
-        <Footer/>
+        <Footer style={footerStyle}/>
       </div>
     );
   }
