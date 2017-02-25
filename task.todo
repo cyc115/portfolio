@@ -1,6 +1,7 @@
 ✔ implement footer @done (2017-02-24, 12:51:28 AM)
 ✔ implement responsive layout @done (2017-02-24, 3:44:56 PM)
 ☐ design the resume page
+  ☐ hover causes raise in paper 
 ☐ move the contact info from the footer to a material quick access button 
   ☐ message 
   ☐ contact info ( phone, email) 
