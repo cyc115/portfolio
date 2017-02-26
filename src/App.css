@@ -6,7 +6,6 @@
 }
 
 body {
-  @import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
   font-family : 'Roboto', sans-serif;
 }
 
@@ -55,3 +54,19 @@ body {
   list-style-position: outside;
 }
 
+.experience-tags-headline {
+  margin-top: 30px;
+}
+
+.resume-section-header {
+  display: inline-block;
+  width: 100%;
+  font-size: 3.5em;
+  text-align: left;
+  margin: 0px;
+  margin-bottom: 30px;
+  color: #29B6F6;
+  font-weight: 300;
+  border-bottom: 3px solid #29B6F6;
+
+}

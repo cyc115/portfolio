@@ -5,6 +5,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import '../App.css'
 
+import SkillTags from '../components/material/SkillTags'
+
+import * as colors from 'material-ui/styles/colors'
+
 injectTapEventPlugin()
 /*
     const {
@@ -26,10 +30,18 @@ let descriptions = ['Manage project. Make short term projections based on teamma
   'Design and implement functionalities related to sensory and navigation.']
 
 const content = {
-          companyName: 'MTC',
-        timeRange: 'May 16 - Sep 18',
-        role: 'Software Engineer Intern2',
-        description : descriptions
+  companyName: 'MTC',
+  timeRange: 'May 16 - Sep 18',
+  role: 'Software Engineer Intern2',
+  description: descriptions,
+  skills: { skills }
+}
+
+let createSkillSet = (lbl, color) => {
+  return {
+    label: lbl,
+    color: color
+  }
 }
 
 storiesOf('Experiences', module)
@@ -41,6 +53,21 @@ storiesOf('Experiences', module)
           focused={3}
           content={content}>
         </Experiences>
+      </MuiThemeProvider>
+    )
+  })
+  .add('skill Tags', () => {
+
+    let skills = [
+      createSkillSet('Android', colors.lightGreen100),
+      createSkillSet('React', colors.lightBlue100),
+      createSkillSet('Android2', colors.lightPink100),
+      createSkillSet('Android3', colors.lightBlue300),
+    ]
+
+    return (
+      <MuiThemeProvider>
+        <SkillTags skills={skills} />
       </MuiThemeProvider>
     )
   })

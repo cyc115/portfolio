@@ -65,14 +65,16 @@ class TabsContainer extends React.Component {
           <Page>
             {this.generateAboutPageContent()}
           </Page>
-
-          <Page>
-            <ResumePage/>
-          </Page>
-
+          
           <div>
             <h2>slide1</h2>
           </div>
+
+          <Page>
+            <ResumePage />
+          </Page>
+
+
           <div>
             <h2>slide2</h2>
           </div>
@@ -87,7 +89,7 @@ class TabsContainer extends React.Component {
   }
 
   generateAboutPageContent() {
-    return <AboutPage/>
+    return <AboutPage />
   }
 
   generatePortfolio() {

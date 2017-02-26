@@ -1,6 +1,8 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import styles from '../../App.css'
+import SkillTags from './SkillTags'
+import { lightGreen100 } from 'material-ui/styles/colors'
+//import styles from '../../App.css'
 
 class Experiences extends React.Component {
 
@@ -40,12 +42,13 @@ class Experiences extends React.Component {
         companyName: 'PTC',
         timeRange: 'May 16 - Sep 17',
         role: 'Software Engineer Intern',
-        description: ['l1', '2', 'l3']
+        description: ['l1', '2', 'l3'],
+        skills : [{ lbl: 'Android', color: lightGreen100 }]
       }} = this.props
 
     return (
       <Paper style={styles.paper}
-        className='experience-paper'  
+        className='experience-paper'
         zDepth={this.state.zDepth}
         onMouseEnter={this.onMouseEnter}
         onMouseLeave={this.onMouseLeave}
@@ -73,6 +76,8 @@ class Experiences extends React.Component {
               <p className='experience-date' style={styles.timeRange}>
                 {content.timeRange}
               </p>
+              {/*skill tags*/}
+              <SkillTags skills={content.skills} className='experiences-tags'/>
 
             </div>
             <div className='experience-right'>
