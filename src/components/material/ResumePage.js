@@ -6,11 +6,6 @@ let descriptions = ['Manage project. Make short term projections based on teamma
   'Led the design of an autonomous robot that navigates through a field of obstacles to the destination. The goal of the robot is to collect a given ,colored block and bring it to a drop zone with the help of various sensors.',
   'Design and implement functionalities related to sensory and navigation.']
 
-let styles = {
-  paper: {
-    marginBottom : '15px'
-  }
-}
 
 let createSkillSet= (lbl, color) => {
   return {
@@ -43,11 +38,9 @@ class ResumePage extends React.Component {
           (v) => {
             return (
               <Experiences
+                className='experience-block'
                 content={content}
-                focused={3}
-                unfocused={1}
-                styles={styles}>
-
+                >
                 <ul style={{ fontSize: '12px' }}>
                   {descriptions.map((v, i) => (<ol key={i} >{v}</ol>))}
                 </ul>

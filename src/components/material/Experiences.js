@@ -2,6 +2,7 @@ import React from 'react'
 import Paper from 'material-ui/Paper'
 import SkillTags from './SkillTags'
 import { lightGreen100 } from 'material-ui/styles/colors'
+import HoverablePaper from './HoverablePaper'
 //import styles from '../../App.css'
 
 class Experiences extends React.Component {
@@ -29,10 +30,7 @@ class Experiences extends React.Component {
   }
   render() {
     const {
-      focused = 3,
-      unfocused = 1,
       styles = {
-        paper: {},
         role: {},
         companyName: {},
         timeRange: {},
@@ -47,13 +45,8 @@ class Experiences extends React.Component {
       }} = this.props
 
     return (
-      <Paper style={styles.paper}
+      <HoverablePaper
         className='experience-paper'
-        zDepth={this.state.zDepth}
-        onMouseEnter={this.onMouseEnter}
-        onMouseLeave={this.onMouseLeave}
-        onTouchStart={this.onMouseEnter}
-        onTouchEnd={this.onMouseLeave}
       >
         <div
           className='experience-main'
@@ -77,7 +70,7 @@ class Experiences extends React.Component {
                 {content.timeRange}
               </p>
               {/*skill tags*/}
-              <SkillTags skills={content.skills} className='experiences-tags'/>
+              <SkillTags skills={content.skills}/>
 
             </div>
             <div className='experience-right'>
@@ -95,7 +88,7 @@ class Experiences extends React.Component {
           </div>
         </div>
 
-      </Paper >
+      </HoverablePaper >
     )
   }
 }

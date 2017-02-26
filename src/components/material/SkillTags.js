@@ -23,7 +23,7 @@ class SkillTags extends React.Component {
     } = this.props
 
     return (
-      <div style={styles.wrapper}>
+      <div style={styles.wrapper} className='experience-tags'>
         {skills.map(skill => {
           return (
           <Chip

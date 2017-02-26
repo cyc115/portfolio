@@ -2,6 +2,9 @@
 import React from 'react'
 import { Tabs, Tab } from 'material-ui/Tabs'
 import SwipeableViews from 'react-swipeable-views'
+
+import loremIpsum from 'lorem-ipsum'
+
 import Page from './Page'
 import AboutPage from './AboutPage'
 import ResumePage from './ResumePage'
@@ -67,19 +70,18 @@ class TabsContainer extends React.Component {
           </Page>
           
           <div>
-            <h2>slide1</h2>
+            <h2>Under construction</h2>
           </div>
 
           <Page>
             <ResumePage />
           </Page>
 
-
           <div>
-            <h2>slide2</h2>
+            <h2>Under construction</h2>
           </div>
           <div>
-            <h2>slide1</h2>
+            <h2>Under construction</h2> 
           </div>
 
 
@@ -89,7 +91,9 @@ class TabsContainer extends React.Component {
   }
 
   generateAboutPageContent() {
-    return <AboutPage />
+    return <AboutPage>
+      {loremIpsum({count : 15})}
+    </AboutPage>
   }
 
   generatePortfolio() {

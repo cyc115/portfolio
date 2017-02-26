@@ -6,6 +6,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import '../App.css'
 
 import SkillTags from '../components/material/SkillTags'
+import HoverablePaper from '../components/material/HoverablePaper'
 
 import * as colors from 'material-ui/styles/colors'
 
@@ -29,13 +30,6 @@ let descriptions = ['Manage project. Make short term projections based on teamma
   'Led the design of an autonomous robot that navigates through a field of obstacles to the destination. The goal of the robot is to collect a given ,colored block and bring it to a drop zone with the help of various sensors.',
   'Design and implement functionalities related to sensory and navigation.']
 
-const content = {
-  companyName: 'MTC',
-  timeRange: 'May 16 - Sep 18',
-  role: 'Software Engineer Intern2',
-  description: descriptions,
-  skills: { skills }
-}
 
 let createSkillSet = (lbl, color) => {
   return {
@@ -44,30 +38,54 @@ let createSkillSet = (lbl, color) => {
   }
 }
 
+let skills = [
+  createSkillSet('Android', colors.lightGreen100),
+  createSkillSet('React', colors.lightBlue100),
+  createSkillSet('Android2', colors.lightPink100),
+  createSkillSet('Android3', colors.lightBlue300),
+]
+
+const content = {
+  companyName: 'MTC',
+  timeRange: 'May 16 - Sep 18',
+  role: 'Software Engineer Intern2',
+  description: descriptions,
+  skills: skills
+}
+
+
 storiesOf('Experiences', module)
   .add('focused', () => {
 
     return (
       <MuiThemeProvider>
-        <Experiences
-          focused={3}
+        <Experiences  
           content={content}>
         </Experiences>
       </MuiThemeProvider>
     )
   })
-  .add('skill Tags', () => {
 
-    let skills = [
-      createSkillSet('Android', colors.lightGreen100),
-      createSkillSet('React', colors.lightBlue100),
-      createSkillSet('Android2', colors.lightPink100),
-      createSkillSet('Android3', colors.lightBlue300),
-    ]
+  .add('skill Tags', () => {
 
     return (
       <MuiThemeProvider>
         <SkillTags skills={skills} />
+      </MuiThemeProvider>
+    )
+  })
+
+  .add('Hoverable paper', () => {
+
+    return (
+      <MuiThemeProvider>
+        <HoverablePaper
+          className='experience-paper'
+          style={{}}
+        >
+          <p>hello world </p>
+        </HoverablePaper>
+          
       </MuiThemeProvider>
     )
   })

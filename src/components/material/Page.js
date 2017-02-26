@@ -13,9 +13,9 @@ class Page extends React.Component {
 
   render() {
     const {children} = this.props.children
-
+    let additionalStyles = this.props.styles || {}
     return (
-      <Paper style={style} zDepth={1}>
+      <Paper style={{...style}} zDepth={1}>
         {this.props.children}
       </Paper>
     )

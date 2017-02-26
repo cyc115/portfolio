@@ -24,7 +24,7 @@ const contentDivStyle = {
   margin: '30px'
 }
 
-function AboutPage() {
+function AboutPage(props) {
 
   return (
 
@@ -34,12 +34,12 @@ function AboutPage() {
           let imgStyle = matches ?
             { ...profImgStyle, ...profImgWideStyle } :  //more than 1000
             { ...profImgStyle, ...profImgThinStyle }    //less than 1000
-          
-          let imgDivStyle = matches ? 
-            { height: '500px', float: 'left' } : {height : 'auto'}
 
-          const contentStyle = matches ? 
-          contentDivStyle : {...contentDivStyle, margin : '0 -25 0 -25'}  
+          let imgDivStyle = matches ?
+            { height: '500px', float: 'left' } : { height: 'auto' }
+
+          const contentStyle = matches ?
+            contentDivStyle : { ...contentDivStyle, margin: '0 -25 0 -25' }
 
           return (
             <div>
@@ -51,7 +51,7 @@ function AboutPage() {
               </div>
               <div style={contentStyle}>
                 <p>
-                  {loremIpsum({ count: 25 })}
+                  {props.children}
                 </p>
               </div>
             </div>
