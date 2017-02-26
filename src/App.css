@@ -76,3 +76,9 @@ body {
   border-bottom: 3px solid #29B6F6;
 
 }
+
+.side-paper-main {
+  width: 330px;
+  margin: auto;
+  background-color: green;
+}

@@ -7,6 +7,7 @@ import '../App.css'
 
 import SkillTags from '../components/material/SkillTags'
 import HoverablePaper from '../components/material/HoverablePaper'
+import SideBlock from '../components/material/SideBlock'
 
 import * as colors from 'material-ui/styles/colors'
 
@@ -55,6 +56,27 @@ const content = {
 
 
 storiesOf('Experiences', module)
+
+  .add('sidebox', () => {
+
+    return (
+      <MuiThemeProvider>
+        <SideBlock
+          paperStyle={{
+            background: colors.blueGrey500,
+            height: '500px'
+          }}
+        >
+          <ul>
+            <li>hello</li>
+            <li>hello</li>
+            <li>hello</li>
+          </ul>
+        </SideBlock>
+      </MuiThemeProvider>
+    )
+  })  
+
   .add('focused', () => {
 
     return (
@@ -89,5 +111,22 @@ storiesOf('Experiences', module)
       </MuiThemeProvider>
     )
   })
+
+
+  .add('skills', () => {
+
+    return (
+      <MuiThemeProvider>
+        <HoverablePaper
+          className='experience-paper'
+          style={{}}
+        >
+          <p>hello world </p>
+        </HoverablePaper>
+          
+      </MuiThemeProvider>
+    )
+  })
+
 
 

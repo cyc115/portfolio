@@ -27,7 +27,7 @@ class HoverablePaper extends React.Component {
 
   render() {
     return (<Paper
-      style={this.props.paper}
+      style={this.props.paperStyle}
       zDepth={this.state.zDepth}
       onMouseEnter={this.onMouseEnter}
       onMouseLeave={this.onMouseLeave}
