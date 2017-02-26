@@ -25,20 +25,21 @@ let descriptions = ['Manage project. Make short term projections based on teamma
   'Led the design of an autonomous robot that navigates through a field of obstacles to the destination. The goal of the robot is to collect a given ,colored block and bring it to a drop zone with the help of various sensors.',
   'Design and implement functionalities related to sensory and navigation.']
 
+const content = {
+          companyName: 'MTC',
+        timeRange: 'May 16 - Sep 18',
+        role: 'Software Engineer Intern2',
+        description : descriptions
+}
+
 storiesOf('Experiences', module)
   .add('focused', () => {
 
-    let paperStyle = {
-      width: '30em',
-      backgroundColor : 'pink'
-    }
-
     return (
       <MuiThemeProvider>
-        <Experiences styles={{ paper: paperStyle }} focused={3}>
-          <ul style={{fontSize : '12px'}}>
-            {descriptions.map((v, i) => (<ol key={i} >{v}</ol>))}
-          </ul>
+        <Experiences
+          focused={3}
+          content={content}>
         </Experiences>
       </MuiThemeProvider>
     )

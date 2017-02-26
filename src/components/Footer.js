@@ -39,6 +39,7 @@ class Footer extends React.Component {
   createIcon(icon, size, style) {
     return (
       <a
+        key={icon.url}  
         href={icon.url}
         target='_blank'
         style={{ color: 'inherit' }}>
