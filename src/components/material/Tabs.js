@@ -66,22 +66,24 @@ class TabsContainer extends React.Component {
           onChangeIndex={this.handleChange} >
 
           <Page>
-            {this.generateAboutPageContent()}
-          </Page>
-          
-          <div>
-            <h2>Under construction</h2>
-          </div>
-
-          <Page>
             <ResumePage />
           </Page>
 
+
+          <Page>
+            {this.generateAboutPageContent()}
+          </Page>
+
+          <div>
+            <h2>Under construction</h2>
+          </div>
+
+
           <div>
             <h2>Under construction</h2>
           </div>
           <div>
-            <h2>Under construction</h2> 
+            <h2>Under construction</h2>
           </div>
 
 
@@ -92,7 +94,7 @@ class TabsContainer extends React.Component {
 
   generateAboutPageContent() {
     return <AboutPage>
-      {loremIpsum({count : 15})}
+      {loremIpsum({ count: 15 })}
     </AboutPage>
   }
 

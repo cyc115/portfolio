@@ -61,9 +61,7 @@ body {
   margin-top: 30px;
 }
 
-.experience-tags {
 
-}
 .resume-section-header {
   display: inline-block;
   width: 100%;
@@ -71,14 +69,57 @@ body {
   text-align: left;
   margin: 0px;
   margin-bottom: 30px;
-  color: #29B6F6;
+  color: #00BCD4;
   font-weight: 300;
-  border-bottom: 3px solid #29B6F6;
+  border-bottom: 3px solid #00BCD4;
 
 }
 
 .side-paper-main {
   width: 330px;
   margin: auto;
-  background-color: green;
+  display: inline-block;
+  float: right;
+}
+
+.resume-left-pane {
+  width: 100px;
+}
+
+.resume-right-pane {
+  width: 330px;
+  float: right;
+  display : inline-block;
+}
+
+.resume-skills-p {
+    color : white;
+    font-size: 1.2em;
+    margin-top: 20px
+}
+.resume-skills-header {
+  font-size: 2em;
+  color : #006775;
+  font-weight: 500;
+  margin : -10px auto;
+
+}
+
+.resume-skill-table tr{
+  color : white;
+  font-size: 1em;
+  text-align: left;
+}
+
+.resume-skill-table :hover {
+  font-size: 1.05em;
+}
+
+.resume-skill-table {
+  margin-top: 30px;
+  width: 100%;
+}
+.resume-skills-block {
+  font-weight: 300;
+  padding : 30px;
 }

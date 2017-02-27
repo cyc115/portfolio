@@ -44,6 +44,7 @@ class Experiences extends React.Component {
         skills : [{ lbl: 'Android', color: lightGreen100 }]
       }} = this.props
 
+    console.log(content.skills[0]);
     return (
       <HoverablePaper
         className='experience-paper'
