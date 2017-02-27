@@ -55,6 +55,7 @@ body {
 .experience-description {
   list-style-type: square;
   list-style-position: outside;
+  text-align: left;
 }
 
 .experience-tags-headline {
@@ -80,6 +81,9 @@ body {
   margin: auto;
   display: inline-block;
   float: right;
+  font-weight: 300;
+  padding : 30px;
+  margin-bottom: 10px;
 }
 
 .resume-left-pane {
@@ -119,7 +123,22 @@ body {
   margin-top: 30px;
   width: 100%;
 }
-.resume-skills-block {
-  font-weight: 300;
-  padding : 30px;
+
+.experience-additional {
+  color : gray;
+  margin-top: 15px;
+  opacity: 0.9;
+}
+
+
+.resume-additional-skills {
+  font-size : 1em;
+  margin-top: 30px;
+}
+
+.resume-contact-info {
+  margin-top: 30px;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
 }

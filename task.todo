@@ -3,9 +3,9 @@
 ☐ design the resume page
   ✔ hover causes raise in paper @done (2017-02-25, 4:42:08 PM)
   ☐ make small screen scale better 
-  ☐ format card
+  ✔ format card @done (2017-02-27, 3:34:22 PM)
   ☐ implement Education header 
-  ☐ implement my skills section 
+  ✔ implement my skills section @done (2017-02-27, 3:34:28 PM)
 ✔ refactor Experience into Experience and hoverablePaper @done (2017-02-26, 11:44:21 AM)
 
 ☐ footer
@@ -21,4 +21,5 @@
   ☐ write up the about page
 
 ☐ deployment 
-  ☐ figure out a way to wake up app 
+  ☐ figure out a way to wake up app
+  ☐ make mobile friendly 

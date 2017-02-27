@@ -53,14 +53,15 @@ class Footer extends React.Component {
   }
 
   render() {
-    const {style = {} } = this.props
+    const {style = {}, iconS = {} } = this.props
 
     return (
       <div style={{
         ...footerStyle,
         ...style
       }} >
-        {this.iconList.map( icon => this.createIcon(icon, this.iconSize, iconStyle)) }
+        {this.iconList.map(icon =>
+          this.createIcon(icon, this.iconSize, { ...iconStyle, ...iconS }))}
       </div>
     )
   }

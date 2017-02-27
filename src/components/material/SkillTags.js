@@ -12,18 +12,21 @@ const styles = {
     flexWrap: 'wrap',
   },
 };
-
+/**
+ * <SkillTags skills=[{label : 'Android', color? : colors}]
+ */
 class SkillTags extends React.Component {
   render() {
     const {
       skills = [{
         label: 'Android',
         color: lightGreen100
-      }]
+      }],
+      className=''
     } = this.props
 
     return (
-      <div style={styles.wrapper} className='experience-tags'>
+      <div style={styles.wrapper} className={`experience-tags ${className}`}>
         {skills.map(skill => {
           return (
           <Chip

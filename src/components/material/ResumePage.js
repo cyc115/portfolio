@@ -2,7 +2,9 @@ import React from 'react'
 import Experiences from './Experiences'
 import SideBlock from './SideBlock'
 import UnderConstruction from './UnderConstruction'
+import Footer from '../Footer'
 import { experiences, skillColors } from '../../constants/PageConstants'
+import SkillTags from './SkillTags'
 
 import * as colors from 'material-ui/styles/colors'
 
@@ -31,7 +33,10 @@ class ResumePage extends React.Component {
 
         <div className='resume-right-pane'>
           <ResumeSkills />
+          <AdditionalSkills />
+          <ContactMeResumeSection />
           <UnderConstruction />
+
         </div>
 
         <div className='resume-left-pane'>
@@ -40,7 +45,7 @@ class ResumePage extends React.Component {
               //remap experiences to the content 
               let content = {
                 companyName: exp.companyName,
-                additionLine: exp.fullName, //TODO this line is not currently displayed 
+                additionalLine: exp.fullName,
                 timeRange: exp.date,
                 role: exp.role,
                 description: exp.descriptions,
@@ -97,12 +102,12 @@ export const ResumeSkills = (props) => {
             <th>{generateStars(4)}</th>
           </tr>
           <tr>
-            <th>NODEJS</th>
-            <th>{generateStars(3)}</th>
-          </tr>
-          <tr>
             <th>JAVA</th>
             <th>{generateStars(4)}</th>
+          </tr>
+          <tr>
+            <th>NODEJS</th>
+            <th>{generateStars(3)}</th>
           </tr>
           <tr>
             <th>ANDROID</th>
@@ -111,6 +116,55 @@ export const ResumeSkills = (props) => {
         </tbody>
       </table>
 
+    </SideBlock>
+  )
+}
+
+export const AdditionalSkills = () => {
+  let skills = [
+    createSkillSet('PHP'),
+    createSkillSet('Linux'),
+    createSkillSet('bash'),
+    createSkillSet('C#'),
+    createSkillSet('IOS'),
+    createSkillSet('MySQL'),
+    createSkillSet('Object Oriented Design principles'),
+  ]
+
+  return (
+    <SideBlock>
+      <p className='resume-skills-header'>
+        <i className='fa fa-cogs' />
+        {' ADDITIONAL SKILLS'}
+      </p>
+
+      <SkillTags skills={skills} className='resume-additional-skills' />
+
+    </SideBlock>
+  )
+}
+
+export const ContactMeResumeSection = () => {
+  let mailTo = () => {
+    window.open("mailto:yuechuan20@gmail.com", '_blank')
+  }
+  return (
+    <SideBlock>
+      <p className='resume-skills-header'>
+        <i className='fa fa-id-card' />
+        {' CONTACT ME'}
+      </p>
+
+      <div className='resume-contact-info'>
+        <p>+1 646 578 1409</p>
+        <p onClick={mailTo}>yuechuan20@gmail.com</p>
+        <div style={{ width: '100%' }}>
+          <Footer iconS={{
+            color: 'white',
+            margin : '5px'
+          }}/>
+        </div>
+      </div>
     </SideBlock>
   )
 }

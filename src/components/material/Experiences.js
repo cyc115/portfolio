@@ -41,15 +41,16 @@ class Experiences extends React.Component {
         timeRange: 'May 16 - Sep 17',
         role: 'Software Engineer Intern',
         description: ['l1', '2', 'l3'],
-        skills : [{ lbl: 'Android', color: lightGreen100 }]
+        skills: [{ lbl: 'Android', color: lightGreen100 }],
+        additionalLine: 'parametric technology'
       }} = this.props
 
     console.log(content.skills[0]);
     return (
-      <HoverablePaper
+      <HoverablePaper 
         className='experience-paper'
       >
-        <div
+        <div 
           className='experience-main'
         >
           <div
@@ -66,12 +67,17 @@ class Experiences extends React.Component {
                 {content.companyName}
               </span>
 
+              <p
+                className='experience-additional'
+              >
+                {content.additionalLine}
+              </p>
               {/*spent time*/}
               <p className='experience-date' style={styles.timeRange}>
                 {content.timeRange}
               </p>
               {/*skill tags*/}
-              <SkillTags skills={content.skills}/>
+              <SkillTags skills={content.skills} />
 
             </div>
             <div className='experience-right'>
