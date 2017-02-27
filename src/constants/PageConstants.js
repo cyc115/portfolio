@@ -138,5 +138,6 @@ export const skillColors = {
   'Java': colors.blue200,
   'bash': colors.brown200,
   'Linux': colors.teal200,
-  'MySQL': colors.lightGreen200,
+  'Git': colors.purpleA100,
+
 }

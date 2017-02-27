@@ -49,7 +49,7 @@ function AboutPage(props) {
                   alt={"profile image"}
                   className='img-prof-responsive' />
               </div>
-              <div style={contentStyle}>
+              <div style={contentStyle} className='about-page-main'>
                 <p>
                   {props.children}
                 </p>

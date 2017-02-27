@@ -128,6 +128,7 @@ export const AdditionalSkills = () => {
     createSkillSet('C#'),
     createSkillSet('IOS'),
     createSkillSet('MySQL'),
+    createSkillSet('Git'),
     createSkillSet('Object Oriented Design principles'),
   ]
 

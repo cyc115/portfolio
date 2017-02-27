@@ -142,3 +142,13 @@ body {
   font-weight: 500;
   color: white;
 }
+
+.about-page-main {
+  font-size: 1.1em;
+  text-align: left;
+}
+
+.about-page-main a{
+  color: #00BCD4;
+  text-decoration: none;
+}

@@ -2,13 +2,12 @@
 import React from 'react'
 import { Tabs, Tab } from 'material-ui/Tabs'
 import SwipeableViews from 'react-swipeable-views'
-
-import loremIpsum from 'lorem-ipsum'
+import Markdown from 'react-remarkable'
 
 import Page from './Page'
 import AboutPage from './AboutPage'
 import ResumePage from './ResumePage'
-
+import UnderConstruction from './UnderConstruction'
 class TabsContainer extends React.Component {
 
   constructor(props) {
@@ -31,8 +30,8 @@ class TabsContainer extends React.Component {
 
     this.tabLabels = [
       'ABOUT',
-      'PORTFOLIO',
       'RESUME',
+      'PORTFOLIO',
       'INTEREST',
       'CONTACT'
     ]
@@ -65,27 +64,30 @@ class TabsContainer extends React.Component {
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange} >
 
+
+          <Page>
+            <AboutPage>
+              {this.generateAboutPageContent()}
+            </AboutPage>
+          </Page>
+
           <Page>
             <ResumePage />
           </Page>
 
 
-          <Page>
-            {this.generateAboutPageContent()}
-          </Page>
 
           <div>
             <h2>Under construction</h2>
           </div>
-
-
-          <div>
-            <h2>Under construction</h2>
-          </div>
+          
           <div>
             <h2>Under construction</h2>
           </div>
 
+          <div>
+            <h2>Under construction</h2>
+          </div>
 
         </SwipeableViews>
       </div>
@@ -93,9 +95,27 @@ class TabsContainer extends React.Component {
   }
 
   generateAboutPageContent() {
-    return <AboutPage>
-      {loremIpsum({ count: 15 })}
-    </AboutPage>
+    return (
+      <div className='about-page-main'>
+        <p>Hi, I'm' Mike.</p>
+        <Markdown>
+          Recently graduated from [McGill University](https://www.mcgill.ca) with a degree of Bachelor of Software Engineering. I am a learner, explorer and an aspiring dancer at heart.
+      </Markdown>
+
+
+        <p>Seeking to be inspired, to envision the unlikely, to work hard for things that are worth it, and to be surrounded by those that works hard and plays hard.</p>
+
+        <p>
+          Moved from China to Montreal, Montreal to New York. I am seeking for an exciting opportunity to begin my career in California.
+        </p>
+
+        <p>
+          <Markdown>
+            Come and say HI on [Facebook](https://www.facebook.com/chen.yuechuan)! 
+          </Markdown>
+        </p>
+      </div>
+    )
   }
 
   generatePortfolio() {
