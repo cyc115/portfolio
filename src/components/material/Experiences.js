@@ -45,7 +45,6 @@ class Experiences extends React.Component {
         additionalLine: 'parametric technology'
       }} = this.props
 
-    console.log(content.skills[0]);
     return (
       <HoverablePaper 
         className='experience-paper'
