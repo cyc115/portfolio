@@ -8,7 +8,8 @@ import '../App.css'
 import SkillTags from '../components/material/SkillTags'
 import HoverablePaper from '../components/material/HoverablePaper'
 import SideBlock from '../components/material/SideBlock'
-import {ResumeSkills} from '../components/material/ResumePage'
+import { ResumeSkills } from '../components/material/ResumePage'
+import EmailPage from '../components/material/EmailPage'
 
 import * as colors from 'material-ui/styles/colors'
 
@@ -57,6 +58,19 @@ const content = {
 
 
 storiesOf('Experiences', module)
+
+  .add('email page', () => {
+
+    return (
+      <MuiThemeProvider>
+        <EmailPage>
+          
+        </EmailPage>
+      </MuiThemeProvider>
+    )
+  })  
+
+  
   .add('skill block', () => {
 
     return (
@@ -65,6 +79,8 @@ storiesOf('Experiences', module)
       </MuiThemeProvider>
     )
   }) 
+
+
   .add('sidebox', () => {
 
     return (

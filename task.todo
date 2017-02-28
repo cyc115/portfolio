@@ -23,3 +23,8 @@
 ☐ deployment 
   ☐ figure out a way to wake up app
   ☐ make mobile friendly 
+  ☐ add visitor analytics
+
+☐ email page
+  ☐ implement backend to use mailgun.
+  ☐ better input validation
