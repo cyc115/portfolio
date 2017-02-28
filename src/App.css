@@ -40,7 +40,7 @@ body {
 
 .experience-company {
   font-size: 3.5em;
-  font-weight: 300;
+  font-weight: 300; 
   text-align: center;
 }
 .experience-date {
@@ -59,6 +59,10 @@ body {
   margin-top: 30px;
 }
 
+.experience-tags {
+  align-content: center;
+  justify-content: center;
+}
 
 .resume-section-header {
   display: inline-block;
@@ -152,11 +156,11 @@ body {
 
 .edu-title {
   font-size: 1.6em;
-  font-family: Times, serif;
+  /*font-family: Times, serif;*/
 }
 
 .edu-address {
-  font-family: Times, serif;
+  /*font-family: Times, serif;*/
   font-size: 1em;
   font-weight: 300;
   font-style: italic; 
@@ -172,4 +176,9 @@ body {
 .large-bold {
   margin-top : 30px;
   margin-bottom : 0px;
+}
+
+.edu-course {
+  font-weight: 500;
+  font-size: 1.5em;
 }

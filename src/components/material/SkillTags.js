@@ -1,7 +1,7 @@
 import React from 'react'
 import Chip from 'material-ui/Chip'
 import { lightGreen100 } from 'material-ui/styles/colors'
-
+import { skillColors } from '../../constants/PageConstants'
 
 const styles = {
   chip: {
@@ -40,9 +40,20 @@ class SkillTags extends React.Component {
       </div>
     )
   }
-
 }
 
-
-
 export default SkillTags
+
+/**
+ * create an object containing the skill label and the
+ * associated color
+ */
+export const createSkillSet = (lbl, color) => {
+  color = skillColors[lbl]
+
+  return {
+    label: lbl,
+    color: color
+  }
+}
+

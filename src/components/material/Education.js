@@ -1,10 +1,9 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
-import SkillTags from './SkillTags'
+import SkillTags, { createSkillSet } from './SkillTags'
 import * as colors from 'material-ui/styles/colors'
 import HoverablePaper from './HoverablePaper'
 import McGillLogo from '../../../public/img/McGill.png'
-
 
 class Experiences extends React.Component {
 
@@ -17,25 +16,32 @@ class Experiences extends React.Component {
       <HoverablePaper
         className='experience-paper'
         paperStyle={{
-          display: 'flex',
           padding: '30px',
-          height : '230px'
+          height: '230px'
         }}
       >
         <div style={{
-          width:'70%'
+          display: 'flex',
+          
         }}>
-          <p className='edu-title'
-          >Bachelor of Engineering in Software</p>
-          <address className='edu-address'>
-            McGill University <br />
-            845 Sherbrooke St W, <br />
-            Montreal, QC H3A 0G4, Canada
+          <div style={{ width: '70%' }}>
+
+            <p className='edu-title'>Bachelor of Engineering in Software</p>
+
+            <address className='edu-address'>
+              McGill University <br />
+              845 Sherbrooke St W, <br />
+              Montreal, QC H3A 0G4, Canada
         </address>
+
+          </div>
+
+          <div style={{ float: 'right', marginRight: '0px', width: '30%' }}>
+            <img src={McGillLogo} alt="McGill university" height='150px' />
+          </div>
+
         </div>
-        <div style={{float: 'right', marginRight:'0px', width:'30%'}}>
-          <img src={McGillLogo} alt="McGill university" height='150px' />
-        </div>
+
       </HoverablePaper>
     )
   }

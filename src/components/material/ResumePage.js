@@ -2,25 +2,14 @@ import React from 'react'
 import Experiences from './Experiences'
 import SideBlock from './SideBlock'
 import UnderConstruction from './UnderConstruction'
+import HoverablePaper from './HoverablePaper'
 import Footer from '../Footer'
 import { experiences, skillColors } from '../../constants/PageConstants'
-import SkillTags from './SkillTags'
+import SkillTags, { createSkillSet } from './SkillTags'
 import Education from './Education'
 
 import * as colors from 'material-ui/styles/colors'
 
-/**
- * create an object containing the skill label and the
- * associated color
- */
-let createSkillSet = (lbl, color) => {
-  color = skillColors[lbl]
-
-  return {
-    label: lbl,
-    color: color
-  }
-}
 
 
 class ResumePage extends React.Component {
@@ -36,11 +25,13 @@ class ResumePage extends React.Component {
 
           <div className='resume-left'>
             <Education />
+            <RelevantCourses />
           </div>
 
         </section>
 
         <section>
+          <br/>
           <p className='resume-section-header'>{'Experiences'}</p>
           {/*float right pane*/}
 
@@ -80,9 +71,31 @@ class ResumePage extends React.Component {
   }
 }
 
+export const RelevantCourses = (props) => {
+  return (
+    <HoverablePaper
+      paperStyle={{
+        padding: '10px',
+      }}
+    >
+      <p className='edu-title'>Relevant courses:</p>
+
+      <SkillTags skills={[
+        createSkillSet('Software Architecture'),
+        createSkillSet('Startup Engineering'),
+        createSkillSet('Artificial Intelligence'),
+        createSkillSet('Database Systems'),
+        createSkillSet('Software Engineering Practices'),
+        createSkillSet('Software Validation'),
+        createSkillSet('Algorithm Design'),
+      ]} />
+    </HoverablePaper>
+  )
+}
+
 export const LanguageSection = (props) => {
   return (
-    <SideBlock className='edu-lang' paperStyle={{Background : 'grey'}}>
+    <SideBlock className='edu-lang' paperStyle={{ Background: 'grey' }}>
       <p className='resume-skills-header'>
         <i className='fa fa-language' />
         {' LANGUAGES'}
