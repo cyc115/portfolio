@@ -7,6 +7,7 @@ import Markdown from 'react-remarkable'
 import Page from './Page'
 import AboutPage from './AboutPage'
 import ResumePage from './ResumePage'
+import EmailPage from './EmailPage'
 import UnderConstruction from './UnderConstruction'
 class TabsContainer extends React.Component {
 
@@ -31,8 +32,8 @@ class TabsContainer extends React.Component {
     this.tabLabels = [
       'ABOUT',
       'RESUME',
-//      'PORTFOLIO',
-//      'INTEREST',
+      //      'PORTFOLIO',
+      //      'INTEREST',
       'CONTACT'
     ]
 
@@ -75,19 +76,11 @@ class TabsContainer extends React.Component {
             <ResumePage />
           </Page>
 
+          <Page>
+            <EmailPage/>
+          </Page>
 
 
-{/*          <div>
-            <h2>Under construction</h2>
-          </div>
-          
-          <div>
-            <h2>Under construction</h2>
-          </div>
-*/}
-          <div>
-            <h2>Under construction</h2>
-          </div>
 
         </SwipeableViews>
       </div>
@@ -111,7 +104,7 @@ class TabsContainer extends React.Component {
 
         <p>
           <Markdown>
-            Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)! 
+            Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)!
           </Markdown>
         </p>
       </div>

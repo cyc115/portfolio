@@ -97,7 +97,6 @@ class EmailPage extends React.Component {
         />
         <TextField
           id='message'
-          hintText="Message text"
           floatingLabelText="Your message here."
           multiLine={true}
           fullWidth={true}
