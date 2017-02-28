@@ -5,6 +5,7 @@ import UnderConstruction from './UnderConstruction'
 import Footer from '../Footer'
 import { experiences, skillColors } from '../../constants/PageConstants'
 import SkillTags from './SkillTags'
+import Education from './Education'
 
 import * as colors from 'material-ui/styles/colors'
 
@@ -25,46 +26,74 @@ let createSkillSet = (lbl, color) => {
 class ResumePage extends React.Component {
   render() {
     return (
-      <div style={{
-        //display :'flex'
-      }}>
-        <p className='resume-section-header'>{'Experiences'}</p>
-        {/*float right pane*/}
+      <div>
+        <section>
+          <p className='resume-section-header'>{'Background'}</p>
 
-        <div className='resume-right-pane'>
-          <ResumeSkills />
-          <AdditionalSkills />
-          <ContactMeResumeSection />
-          <UnderConstruction />
+          <div className='resume-right'>
+            <LanguageSection />
+          </div>
 
-        </div>
+          <div className='resume-left'>
+            <Education />
+          </div>
 
-        <div className='resume-left-pane'>
-          {
-            experiences.map(exp => {
-              //remap experiences to the content 
-              let content = {
-                companyName: exp.companyName,
-                additionalLine: exp.fullName,
-                timeRange: exp.date,
-                role: exp.role,
-                description: exp.descriptions,
-                skills: exp.skills.map(s => createSkillSet(s))
-              }
+        </section>
 
-              return (
-                <Experiences
-                  className='experience-block'
-                  content={content} />
-              )
-            })
-          }
-        </div>
+        <section>
+          <p className='resume-section-header'>{'Experiences'}</p>
+          {/*float right pane*/}
+
+          <div className='resume-right-pane'>
+            <ResumeSkills />
+            <AdditionalSkills />
+            <ContactMeResumeSection />
+            <UnderConstruction />
+          </div>
+
+          <div className='resume-left-pane'>
+            {
+              experiences.map(exp => {
+                //remap experiences to the content 
+                let content = {
+                  companyName: exp.companyName,
+                  additionalLine: exp.fullName,
+                  timeRange: exp.date,
+                  role: exp.role,
+                  description: exp.descriptions,
+                  skills: exp.skills.map(s => createSkillSet(s))
+                }
+
+                return (
+                  <Experiences
+                    className='experience-block'
+                    content={content} />
+                )
+              })
+            }
+          </div>
 
 
+        </section>
       </div>
     )
   }
+}
+
+export const LanguageSection = (props) => {
+  return (
+    <SideBlock className='edu-lang' paperStyle={{Background : 'grey'}}>
+      <p className='resume-skills-header'>
+        <i className='fa fa-language' />
+        {' LANGUAGES'}
+      </p>
+      <div className='large-bold'>
+        <p>English</p>
+        <p>French</p>
+        <p>Mandarin</p>
+      </div>
+    </SideBlock>
+  )
 }
 
 /**
@@ -162,8 +191,8 @@ export const ContactMeResumeSection = () => {
         <div style={{ width: '100%' }}>
           <Footer iconS={{
             color: 'white',
-            margin : '5px'
-          }}/>
+            margin: '5px'
+          }} />
         </div>
       </div>
     </SideBlock>

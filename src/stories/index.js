@@ -10,7 +10,7 @@ import HoverablePaper from '../components/material/HoverablePaper'
 import SideBlock from '../components/material/SideBlock'
 import { ResumeSkills } from '../components/material/ResumePage'
 import EmailPage from '../components/material/EmailPage'
-
+import Education from '../components/material/Education'
 import * as colors from 'material-ui/styles/colors'
 
 injectTapEventPlugin()
@@ -58,6 +58,16 @@ const content = {
 
 
 storiesOf('Experiences', module)
+
+  .add('Education page', () => {
+
+    return (
+      <MuiThemeProvider> 
+        <Education/>
+      </MuiThemeProvider>
+    )
+  })  
+
 
   .add('email page', () => {
 

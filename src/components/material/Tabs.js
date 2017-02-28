@@ -76,8 +76,9 @@ class TabsContainer extends React.Component {
             <ResumePage />
           </Page>
 
+
           <Page>
-            <EmailPage/>
+            <EmailPage />
           </Page>
 
 

@@ -9,9 +9,6 @@ body {
   font-family : 'Roboto', sans-serif;
 }
 
-.hoverable-paper {
-
-}
 .experience-inner {
    width: 560px;
    padding: 40px;
@@ -151,4 +148,28 @@ body {
 .about-page-main a{
   color: #00BCD4;
   text-decoration: none;
+}
+
+.edu-title {
+  font-size: 1.6em;
+  font-family: Times, serif;
+}
+
+.edu-address {
+  font-family: Times, serif;
+  font-size: 1em;
+  font-weight: 300;
+  font-style: italic; 
+}
+
+
+.large-bold p{
+  font-size: 1em;
+  font-weight: 500;
+  color : white;
+}
+
+.large-bold {
+  margin-top : 30px;
+  margin-bottom : 0px;
 }

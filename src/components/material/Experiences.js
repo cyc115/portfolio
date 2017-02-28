@@ -12,7 +12,6 @@ class Experiences extends React.Component {
 
   }
 
-
   render() {
     const {
       styles = {
