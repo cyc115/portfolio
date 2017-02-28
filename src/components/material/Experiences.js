@@ -9,25 +9,10 @@ class Experiences extends React.Component {
 
   constructor(props) {
     super(props)
-    this.state = {
-      zDepth: 1,
-    }
-    this.onMouseEnter = this.onMouseEnter.bind(this)
-    this.onMouseLeave = this.onMouseLeave.bind(this)
+
   }
 
 
-  onMouseEnter() {
-    this.setState({
-      zDepth: this.props.focused,
-    })
-  }
-
-  onMouseLeave() {
-    this.setState({
-      zDepth: this.props.unfocused,
-    })
-  }
   render() {
     const {
       styles = {
