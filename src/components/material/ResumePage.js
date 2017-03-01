@@ -25,7 +25,7 @@ class ResumePage extends React.Component {
 
           <div className='resume-left'>
             <Education />
-            <RelevantCourses />
+            {/*<RelevantCourses />*/}
           </div>
 
         </section>
