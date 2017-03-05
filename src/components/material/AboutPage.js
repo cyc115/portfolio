@@ -77,11 +77,10 @@ function generateContent(style) {
         Moved from China to Montreal, Montreal to New York. I am seeking for an exciting opportunity to begin my career in California.
         </p>
 
-      <p>
         <Markdown>
           Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)!
-          </Markdown>
-      </p>
+          </Markdown>      
+
     </div>
   )
 }

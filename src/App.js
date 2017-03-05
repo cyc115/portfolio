@@ -8,16 +8,16 @@ import './App.css';
 
 
 const appStyle = {
-  'max-width': '1100px',
+  maxWidth: '1100px',
   textAlign: 'center',
-  margin : 'auto'
+  margin: 'auto'
 }
 
 const footerStyle = {
   position: 'fixed',
   top: '90%',
-  left : '46%',
-  margin: '15px',  
+  left: '46%',
+  margin: '15px',
 }
 
 class App extends Component {
@@ -26,7 +26,7 @@ class App extends Component {
       <div className="App" style={appStyle}>
         <h1 className='name-title'>Mike Chen</h1>
         <TabsContainer />
-        <Footer style={footerStyle}/>
+        <Footer style={footerStyle} />
       </div>
     );
   }

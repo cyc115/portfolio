@@ -9,51 +9,50 @@ const iconStyle = {
   width: '25px',
   lineHeight: '25px',
   color: 'white',
-  backgroundColor : 'black'
+  backgroundColor: 'black'
 }
 
 const footerStyle = {
-  marginTop : '25px',
-  float : 'bottom'
+  marginTop: '25px',
+  float: 'bottom'
 }
 
 class Footer extends React.Component {
   constructor(props) {
     super(props)
-    this.iconSize = '1'
+
     this.iconList = [
       this.createSiteObject('github', 'http://www.github.com/cyc115'),
       this.createSiteObject('stack-overflow', 'http://stackoverflow.com/users/1272013/cyc115'),
-      this.createSiteObject('linkedin','https://www.linkedin.com/in/chen-yuechuan-995b9b54'),
+      this.createSiteObject('linkedin', 'https://www.linkedin.com/in/chen-yuechuan-995b9b54'),
       this.createSiteObject('facebook', 'https://www.facebook.com/chen.yuechuan')
     ]
   }
 
-  createSiteObject(iconName, url='') {
+  createSiteObject(iconName, url = '') {
     return {
       name: iconName,
-      url : url
+      url: url
     }
   }
-  
-  createIcon(icon, size, style) {
+
+  createIcon(icon, style) {
     return (
       <a
-        key={icon.url}  
+        key={icon.url}
         href={icon.url}
         target='_blank'
         style={{ color: 'inherit' }}>
-      <FontAwesome
-        name={icon.name}
-        size={size}
-        style={style}
+        <FontAwesome
+          name={icon.name}
+          style={style}
         />
-      </a>  
+      </a>
     )
   }
 
   render() {
-    const {style = {}, iconS = {} } = this.props
+    const { style = {}, iconS = {} } = this.props
 
     return (
       <div style={{
@@ -61,7 +60,7 @@ class Footer extends React.Component {
         ...style
       }} >
         {this.iconList.map(icon =>
-          this.createIcon(icon, this.iconSize, { ...iconStyle, ...iconS }))}
+          this.createIcon(icon, { ...iconStyle, ...iconS }))}
       </div>
     )
   }
