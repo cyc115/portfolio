@@ -42,7 +42,8 @@ class ResumePage extends React.Component {
 
           <div className='resume-left-pane'>
             {
-              experiences.map(exp => {
+              experiences.map((exp,idx) => {
+
                 //remap experiences to the content 
                 let content = {
                   companyName: exp.companyName,
@@ -56,7 +57,7 @@ class ResumePage extends React.Component {
                 return (
                   <Experiences
                     className='experience-block'
-                    content={content} />
+                    content={content} key={idx}/>
                 )
               })
             }
@@ -112,10 +113,10 @@ export const LanguageSection = (props) => {
  */
 function generateStars(str) {
   let full = Array.apply(null, { length: str }).map(
-    v => <i className='fa fa-star' />
+    (v, idx) => <i className='fa fa-star' key={idx}/>
   )
   let empty = Array.apply(null, { length: 5 - str }).map(
-    v => <i className='fa fa-star-o' />
+    (v,idx) => <i className='fa fa-star-o' key={-idx-1}/>
   )
   return full.concat(empty)
 }

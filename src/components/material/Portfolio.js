@@ -51,8 +51,9 @@ class Portfolio extends React.Component {
 function generateShowCase() {
   return (
     <div className='show-case-container'>
-      {portfolio.map(v => {
+      {portfolio.map((v,idx) => {
         return <ShowCase
+          key={idx}  
           src={v.imgSrc || placeHolder}
           title={v.title}
           description={v.description}
