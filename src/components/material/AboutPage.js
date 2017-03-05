@@ -46,7 +46,7 @@ function AboutPage(props) {
               <div style={imgDivStyle}>
                 <img src={profImg}
                   style={imgStyle}
-                  alt={"profile image"}
+                  alt={"profile"}
                   className='img-prof-responsive' />
               </div>
 

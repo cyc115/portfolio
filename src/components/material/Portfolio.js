@@ -1,7 +1,5 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
-import Flipper from './Flipper/Flipper'
-import { Card, CardMedia, CardTitle, CardText, CardAction } from 'material-ui/Card'
+import {CardMedia, CardTitle, CardText} from 'material-ui/Card'
 import HoverablePaper from './HoverablePaper'
 import FlatButton from 'material-ui/FlatButton'
 import './portfolio.css'

@@ -1,15 +1,13 @@
 import React from 'react'
+
 import Experiences from './Experiences'
 import SideBlock from './SideBlock'
 import UnderConstruction from './UnderConstruction'
 import HoverablePaper from './HoverablePaper'
 import Footer from '../Footer'
-import { experiences, skillColors } from '../../constants/PageConstants'
+import { experiences} from '../../constants/PageConstants'
 import SkillTags, { createSkillSet } from './SkillTags'
 import Education from './Education'
-
-import * as colors from 'material-ui/styles/colors'
-
 
 
 class ResumePage extends React.Component {

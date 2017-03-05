@@ -1,15 +1,8 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
-import SkillTags, { createSkillSet } from './SkillTags'
-import * as colors from 'material-ui/styles/colors'
 import HoverablePaper from './HoverablePaper'
 import McGillLogo from '../../../public/img/McGill.png'
 
 class Experiences extends React.Component {
-
-  constructor(props) {
-    super(props)
-  }
 
   render() {
     return (

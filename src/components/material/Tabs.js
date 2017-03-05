@@ -2,15 +2,12 @@
 import React from 'react'
 import { Tabs, Tab } from 'material-ui/Tabs'
 import SwipeableViews from 'react-swipeable-views'
-import Markdown from 'react-remarkable'
 
 import Page from './Page'
 import AboutPage from './AboutPage'
 import ResumePage from './ResumePage'
 import EmailPage from './EmailPage'
 import Portfolio from './Portfolio'
-import UnderConstruction from './UnderConstruction'
-
 
 class TabsContainer extends React.Component {
 

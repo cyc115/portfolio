@@ -8,14 +8,18 @@ const style = {
   textAlign: 'center',
   display: 'block'
 }
-
+/**
+ * attributes :
+ * {styles} : additional style used on <Paper>
+ */
 class Page extends React.Component {
 
   render() {
-    const {children} = this.props.children
+    
     let additionalStyles = this.props.styles || {}
+
     return (
-      <Paper style={{...style}} zDepth={1}>
+      <Paper style={{...style, ...additionalStyles}} zDepth={1}>
         {this.props.children}
       </Paper>
     )

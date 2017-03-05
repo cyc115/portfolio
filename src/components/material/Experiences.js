@@ -1,16 +1,10 @@
 import React from 'react'
-import Paper from 'material-ui/Paper'
 import SkillTags from './SkillTags'
 import { lightGreen100 } from 'material-ui/styles/colors'
 import HoverablePaper from './HoverablePaper'
 //import styles from '../../App.css'
 
 class Experiences extends React.Component {
-
-  constructor(props) {
-    super(props)
-
-  }
 
   render() {
     const {

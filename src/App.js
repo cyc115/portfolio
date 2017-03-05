@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import injectTapEventPlugin from 'react-tap-event-plugin'
-import * as K from './constants/PageConstants'
 import TabsContainer from './components/material/Tabs'
 import Footer from './components/Footer'
 

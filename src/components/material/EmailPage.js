@@ -1,10 +1,6 @@
 import React from 'react'
-import { Tabs, Tab } from 'material-ui/Tabs'
 import TextField from 'material-ui/TextField';
 import RaisedButton from 'material-ui/RaisedButton'
-
-
-import * as colors from 'material-ui/styles/colors'
 
 
 class EmailPage extends React.Component {
