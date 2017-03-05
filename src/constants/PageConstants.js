@@ -140,3 +140,56 @@ export const skillColors = {
   'Linux': colors.teal200,
   'Git': colors.brown200,
 }
+
+import dpm from '../../public/img/dpm.jpg'
+import eatThis from '../../public/img/eat-this.jpg'
+import logger from '../../public/img/logger.jpg'
+import noter from '../../public/img/noter.jpg'
+import prof from '../../public/img/prof.jpg'
+
+
+export const portfolio = [
+    {
+    imgSrc: prof,
+    title: 'Personal profile website',
+    description: 'Built with Node + React + Redux + Mongo',
+    link: 'https://github.com/cyc115/portfolio',
+    linkText: 'GITHUB',
+  },
+  {
+    imgSrc: logger,
+    title: 'A computer usage Logger',
+    description: 'Monitor computer usage and push the gathered usage data to airtable',
+    link: 'https://github.com/cyc115/computerUsageLogger',
+    linkText: 'GITHUB',
+  },
+  {
+    imgSrc: noter,
+    title: 'Noter : Markdown Editor',
+    description: 'A simple, easy to use note taking application.',
+    link: 'https://github.com/cyc115/noter',
+    linkText: 'GITHUB',
+  },
+  {
+    imgSrc: dpm,
+    title: 'DPM class project',
+    description: 'Autonomous navigation robot implemented with LEGO mindstorm',
+    link: 'https://github.com/cyc115/Autonomous-Navigation-Robot',
+    linkText: 'GITHUB',
+  },
+  {
+    imgSrc: eatThis,
+    title: 'Eat this Climbers',
+    description: 'A Game made for the Viking lovers during the two day McGameHack.',
+    link: 'https://github.com/cyc115/McGameHack',
+    linkText: 'GITHUB',
+  },
+    {
+    imgSrc: '',
+    title: 'Voice Assistant for Android',
+    description: `proof of concept of an Android voice Assistant app allowing the user to call, text message contacts and perform other simple tasks without having to pull out their phone from their pocket.`,
+    link: 'https://github.com/cyc115/VoiceAssistant',
+    linkText: 'GITHUB',
+  },
+
+]

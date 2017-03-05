@@ -14,7 +14,7 @@ class Flipper extends React.Component {
   }
 
   render() {
-    const {index = 0, className, face = false, style} = this.props
+    const {index = 0, className='', face = false, style} = this.props
 
     return (
       <div

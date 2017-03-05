@@ -1,47 +1,85 @@
 import React from 'react'
-import Flipper from './flipper/Flipper'
+import Paper from 'material-ui/Paper'
+import Flipper from './Flipper/Flipper'
+import { Card, CardMedia, CardTitle, CardText, CardAction } from 'material-ui/Card'
+import HoverablePaper from './HoverablePaper'
+import FlatButton from 'material-ui/FlatButton'
+import './portfolio.css'
+import { portfolio } from '../../constants/PageConstants'
+import placeHolder from '../../../public/img/placeholder.png'
 
 class Portfolio extends React.Component {
 
   constructor(props) {
-    super(props) 
-    this.state = { idx: 0, face: true }
+    super(props)
+    this.state = {
+      i1: 0
+    }
     this.flip = this.flip.bind(this)
-  }  
-
-  componentDidMount() {
-    this.timer = setInterval(() => {
-      this.flip()
-      console.log('interval');
-    }, 3000)
+    this.toggleBack = this.toggleBack.bind(this)
+    this.toggleFront = this.toggleFront.bind(this)
   }
 
-  componentWillUnmount() {
-    clearInterval(this.timer)
+
+  flip() {
+    this.setState({ i1: (this.state.i1 === 0 ? 1 : 0) })
   }
- 
-  flip () {
-    this.setState({ idx: ((this.state.idx+1) %3) ,face : !this.state.face})
-    //console.log();
+
+  toggleBack() {
+    this.setState({ i1: 1 })
   }
- 
+
+  toggleFront() {
+    this.setState({ i1: 0 })
+  }
+
   render() {
     return (
-      <div>
-        <Flipper
-          index={this.state.idx}
-          face={this.state.face}
-          style={{
-            width: '100px',
-          }}
-        >
-          <article>hello1dsa</article>
-          <article>hello2</article>
-          <article>hello3</article>
-        </Flipper>
+      <div
+        onMouseEnter={this.toggleBack}
+        onMouseLeave={this.toggleFront}
+        onTouchStart={this.toggleBack}
+        onTouchEnd={this.toggleFront}
+      >
+
+        {generateShowCase()}
       </div>
     )
   }
+}
+
+
+
+function generateShowCase() {
+  return (
+    <div className='show-case-container'>
+      {portfolio.map(v => {
+        return <ShowCase
+          src={v.imgSrc || placeHolder}
+          title={v.title}
+          description={v.description}
+          linkText={v.linkText}
+          link={v.link}
+          style={{
+            marginRight: '30px',
+          }}
+        />
+      })}
+    </div>
+  )
+}
+
+const ShowCase = ({ src, title, description, linkText, link, index }) => {
+  return (
+    <HoverablePaper className='port-showcase-card'>
+      <CardMedia
+        overlay={<CardTitle title={title}></CardTitle>}>
+        <img src={src} alt={title} />
+      </CardMedia>
+      <CardText>{description}</CardText>
+      <FlatButton label='GITHUB' href={link} target='_blank' />
+    </HoverablePaper>
+  )
 }
 
 export default Portfolio

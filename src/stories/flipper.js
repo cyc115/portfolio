@@ -4,7 +4,8 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import * as colors from 'material-ui/styles/colors'
 
-import Flipper from '../components/material/flipper/Flipper'
+import Flipper from '../components/material/Flipper/Flipper'
+import Portfolio from '../components/material/Portfolio'
 let idx = 0
 
 function toggle(e) {
@@ -23,9 +24,7 @@ storiesOf('Portfolio', module)
   .add('main', () => {
     return (
       <MuiThemeProvider>
-        <Flipper>
-          <h1> hello </h1>
-        </Flipper>
+        <Portfolio/>
       </MuiThemeProvider>
     )
   })  

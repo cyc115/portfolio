@@ -8,6 +8,7 @@ import Page from './Page'
 import AboutPage from './AboutPage'
 import ResumePage from './ResumePage'
 import EmailPage from './EmailPage'
+import Portfolio from './Portfolio'
 import UnderConstruction from './UnderConstruction'
 class TabsContainer extends React.Component {
 
@@ -32,7 +33,7 @@ class TabsContainer extends React.Component {
     this.tabLabels = [
       'ABOUT',
       'RESUME',
-      //      'PORTFOLIO',
+      'PORTFOLIO',
       //      'INTEREST',
       'CONTACT'
     ]
@@ -76,6 +77,10 @@ class TabsContainer extends React.Component {
             <ResumePage />
           </Page>
 
+          <Page>
+            <Portfolio/>
+          </Page>
+          
           <Page>
             <EmailPage />
           </Page>
