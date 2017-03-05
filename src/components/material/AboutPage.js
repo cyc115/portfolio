@@ -1,7 +1,7 @@
 import React from 'react'
 import profImg from '../../../public/img/profile.jpg'
 import Markdown from 'react-remarkable'
-
+import './AboutPage.css'
 import MediaQuery from 'react-responsive'
 
 const profImgWideStyle = {
@@ -27,59 +27,36 @@ const contentDivStyle = {
 function AboutPage(props) {
 
   return (
+    <div >
 
-    <MediaQuery minWidth={1000}>
-      {
-        (matches) => {
-          let imgStyle = matches ?
-            { ...profImgStyle, ...profImgWideStyle } :  //more than 1000
-            { ...profImgStyle, ...profImgThinStyle }    //less than 1000
+      <div className='about-img-div'>
+        <img src={profImg}
+          alt={"profile"}
+          className='img-prof-responsive' />
 
-          let imgDivStyle = matches ?
-            { height: '500px', float: 'left' } : { height: 'auto' }
+      </div>
 
-          const contentStyle = matches ?
-            contentDivStyle : { ...contentDivStyle, margin: '0 -25 0 -25' }
+      {generateContent()}
 
-          return (
-            <div>
-              <div style={imgDivStyle}>
-                <img src={profImg}
-                  style={imgStyle}
-                  alt={"profile"}
-                  className='img-prof-responsive' />
-              </div>
-
-              {generateContent(contentStyle)}
-
-            </div>
-          )
-
-        }
-      }
-    </MediaQuery>
-
+    </div>
   )
 }
 
-function generateContent(style) {
+function generateContent() {
   return (
-    <div className='about-page-main' style={style}>
+    <div className='about-page-main'>
       <p>Hi, I'm' Mike.</p>
       <Markdown>
         Recently graduated from [McGill University](https://www.mcgill.ca) with a degree of Bachelor of Software Engineering. I am a learner, explorer and an aspiring dancer at heart.
       </Markdown>
 
-
       <p>Seeking to be inspired, to envision the unlikely, to work hard for things that are worth it, and to be surrounded by those that works hard and plays hard.</p>
 
-      <p>
-        Moved from China to Montreal, Montreal to New York. I am seeking for an exciting opportunity to begin my career in California.
-        </p>
+      <p>Moved from China to Montreal, Montreal to New York. I am seeking for an exciting opportunity to begin my career in California.</p>
 
-        <Markdown>
-          Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)!
-          </Markdown>      
+      <Markdown>
+        Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)!
+      </Markdown>
 
     </div>
   )

@@ -1,0 +1,38 @@
+.img-prof-responsive {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.about-page-main {
+  font-family: Roboto, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 150px;
+  margin: 30px;
+}
+
+
+/* large display */
+
+@media (min-width: 1024px) {
+  .img-prof-responsive {
+    margin: 0px 50px 0 -10px;
+    padding: 50px 0px
+  }
+
+  .about-img-div {
+    height: 500px;
+    float: left;
+  }
+}
+
+
+/* smaller than tablet */
+
+@media (max-width: 1024px) {
+  .about-img-div {
+    height: auto;
+  }
+  .about-page-main {
+    margin: 30px -25px;
+  }
+}
