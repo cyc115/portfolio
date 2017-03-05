@@ -1,12 +1,12 @@
 import React from 'react'
 import profImg from '../../../public/img/profile.jpg'
-import loremIpsum from 'lorem-ipsum'
+import Markdown from 'react-remarkable'
+
 import MediaQuery from 'react-responsive'
 
 const profImgWideStyle = {
   margin: '0px 50px 0 -10px',
   padding: '50px 0',
-  //float: 'left',
 }
 
 const profImgStyle = {
@@ -49,11 +49,9 @@ function AboutPage(props) {
                   alt={"profile image"}
                   className='img-prof-responsive' />
               </div>
-              <div style={contentStyle} className='about-page-main'>
-                <p>
-                  {props.children}
-                </p>
-              </div>
+
+              {generateContent(contentStyle)}
+
             </div>
           )
 
@@ -61,6 +59,30 @@ function AboutPage(props) {
       }
     </MediaQuery>
 
+  )
+}
+
+function generateContent(style) {
+  return (
+    <div className='about-page-main' style={style}>
+      <p>Hi, I'm' Mike.</p>
+      <Markdown>
+        Recently graduated from [McGill University](https://www.mcgill.ca) with a degree of Bachelor of Software Engineering. I am a learner, explorer and an aspiring dancer at heart.
+      </Markdown>
+
+
+      <p>Seeking to be inspired, to envision the unlikely, to work hard for things that are worth it, and to be surrounded by those that works hard and plays hard.</p>
+
+      <p>
+        Moved from China to Montreal, Montreal to New York. I am seeking for an exciting opportunity to begin my career in California.
+        </p>
+
+      <p>
+        <Markdown>
+          Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)!
+          </Markdown>
+      </p>
+    </div>
   )
 }
 

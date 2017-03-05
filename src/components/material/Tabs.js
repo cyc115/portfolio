@@ -10,6 +10,8 @@ import ResumePage from './ResumePage'
 import EmailPage from './EmailPage'
 import Portfolio from './Portfolio'
 import UnderConstruction from './UnderConstruction'
+
+
 class TabsContainer extends React.Component {
 
   constructor(props) {
@@ -18,37 +20,27 @@ class TabsContainer extends React.Component {
       slideIndex: 0
     }
 
-    this.styles = {
-      headline: {
-        fontSize: 24,
-        paddingTop: 16,
-        marginBottom: 12,
-        fontWeight: 400,
-      },
-      slide: {
-        padding: 10,
-      }
-    }
-
     this.tabLabels = [
       'ABOUT',
       'RESUME',
       'PORTFOLIO',
-      //      'INTEREST',
       'CONTACT'
     ]
-
-    this.generateAboutPageContent = this.generateAboutPageContent.bind(this)
   }
 
-  handleChange = (v) => {
+/**
+ * Update the state when tab index needed to be changed
+ */  
+  handleChangeIndex = (v) => {
     this.setState({
       ...this.state,
       slideIndex: v
     })
-    console.dir(`changed idx to : ${this.state.slideIndex}`);
   }
 
+  /**
+   * Generate a list of <Tab> containing given labels 
+   */
   genTabs = (labels) => {
     return (labels.map((v, i) => <Tab label={v} value={i} key={v} />))
   }
@@ -63,34 +55,32 @@ class TabsContainer extends React.Component {
     switch (this.state.slideIndex) {
       default:
       case 0:
-        about = (<AboutPage>
-          {this.generateAboutPageContent()}
-        </AboutPage>)
+        about = <AboutPage/>
         break;
       case 1:
-        resume = <ResumePage />
+        resume = <ResumePage/>
         break;
 
       case 2:
-        portfolio = <Portfolio />
+        portfolio = <Portfolio/>
         break;
 
       case 3:
-        email = <EmailPage />
+        email = <EmailPage/>
         break;
     }
 
     return (
       <div>
         <Tabs
-          onChange={this.handleChange}
+          onChange={this.handleChangeIndex}
           value={this.state.slideIndex} >
           {this.genTabs(this.tabLabels)}
         </Tabs>
 
         <SwipeableViews
           index={this.state.slideIndex}
-          onChangeIndex={this.handleChange} >
+          onChangeIndex={this.handleChangeIndex} >
 
           <Page>
             {about}
@@ -108,42 +98,11 @@ class TabsContainer extends React.Component {
             {email}
           </Page>
 
-
-
         </SwipeableViews>
       </div>
     )
   }
 
-  generateAboutPageContent() {
-    return (
-      <div className='about-page-main'>
-        <p>Hi, I'm' Mike.</p>
-        <Markdown>
-          Recently graduated from [McGill University](https://www.mcgill.ca) with a degree of Bachelor of Software Engineering. I am a learner, explorer and an aspiring dancer at heart.
-      </Markdown>
-
-
-        <p>Seeking to be inspired, to envision the unlikely, to work hard for things that are worth it, and to be surrounded by those that works hard and plays hard.</p>
-
-        <p>
-          Moved from China to Montreal, Montreal to New York. I am seeking for an exciting opportunity to begin my career in California.
-        </p>
-
-        <p>
-          <Markdown>
-            Come and say Hi via the "Contact" tab or on [Facebook](https://www.facebook.com/chen.yuechuan)!
-          </Markdown>
-        </p>
-      </div>
-    )
-  }
-
-  generatePortfolio() {
-    return (
-      <div></div>
-    )
-  }
 }
 
 export default TabsContainer
