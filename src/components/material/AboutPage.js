@@ -2,27 +2,6 @@ import React from 'react'
 import profImg from '../../../public/img/profile.jpg'
 import Markdown from 'react-remarkable'
 import './AboutPage.css'
-import MediaQuery from 'react-responsive'
-
-const profImgWideStyle = {
-  margin: '0px 50px 0 -10px',
-  padding: '50px 0',
-}
-
-const profImgStyle = {
-  width: '150px',
-  height: '150px',
-  borderRadius: '50%',
-}
-//when on small display 
-const profImgThinStyle = {
-}
-
-const contentDivStyle = {
-  fontFamily: 'Roboto',
-  minHeight: '150px',
-  margin: '30px'
-}
 
 function AboutPage(props) {
 
