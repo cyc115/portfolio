@@ -54,6 +54,32 @@ class TabsContainer extends React.Component {
   }
 
   render() {
+
+    let about = <div></div>
+    let resume = <div></div>
+    let portfolio = <div></div>
+    let email = <div></div>
+
+    switch (this.state.slideIndex) {
+      default:
+      case 0:
+        about = (<AboutPage>
+          {this.generateAboutPageContent()}
+        </AboutPage>)
+        break;
+      case 1:
+        resume = <ResumePage />
+        break;
+
+      case 2:
+        portfolio = <Portfolio />
+        break;
+
+      case 3:
+        email = <EmailPage />
+        break;
+    }
+
     return (
       <div>
         <Tabs
@@ -66,23 +92,20 @@ class TabsContainer extends React.Component {
           index={this.state.slideIndex}
           onChangeIndex={this.handleChange} >
 
-
           <Page>
-            <AboutPage>
-              {this.generateAboutPageContent()}
-            </AboutPage>
+            {about}
           </Page>
 
           <Page>
-            <ResumePage />
+            {resume}
           </Page>
 
           <Page>
-            <Portfolio/>
+            {portfolio}
           </Page>
-          
+
           <Page>
-            <EmailPage />
+            {email}
           </Page>
 
 
