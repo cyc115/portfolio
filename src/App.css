@@ -9,16 +9,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
 .experience-inner {
   width: 560px;
   padding: 40px;
   display: flex;
 }
 
-.experience-paper {
-  width: 640px;
-  margin-bottom: 15px;
-}
+
 
 .experience-main {
   font-weight: 300;

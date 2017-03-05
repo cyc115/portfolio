@@ -19,15 +19,22 @@ class ResumePage extends React.Component {
         {/* background */}
 
         <section>
+
           <p className='resume-section-header'>{'Background'}</p>
 
-          <div className='resume-right'>
-            <LanguageSection />
-          </div>
+          <div className='resume-flex-container'>
 
-          <div className='resume-left'>
-            <Education />
-            {/*<RelevantCourses />*/}
+            <div className='resume-left-pane'>
+              <Education />
+              {/*<RelevantCourses />*/}
+            </div>
+
+            <div className='resume-right-pane'>
+              <LanguageSection />
+            </div>
+
+
+
           </div>
 
         </section>

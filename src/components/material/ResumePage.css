@@ -10,8 +10,14 @@
   border-bottom: 3px solid #00BCD4;
 }
 
+.resume-flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 .resume-left-pane {
-  width: 100px;
+  width: 500px;
 }
 
 .resume-right-pane {

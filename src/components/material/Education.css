@@ -1,0 +1,56 @@
+:root {
+  font-family: Roboto, sans-serif;
+}
+
+.edu-main {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center
+}
+
+.edu-title {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.edu-address {
+  text-align: center;
+}
+
+.edu-right-col img {
+  height: 150px;
+  margin: 0 auto;
+}
+
+
+
+/*bigger than tablet */
+
+@media (min-width: 768px) {
+  .edu-main {
+    width: 640px;
+  }
+  .edu-left-text-col {
+    width: 70%;
+  }
+}
+
+
+/* smaller than tablet */
+
+@media (max-width: 768px) {
+  .edu-main {
+    width: 100%;
+  }
+  .edu-left-text-col {
+    width: 100%;
+  }
+  .edu-title, .edu-address {
+    text-align: center;
+  }
+
+  .edu-right-col {
+    margin-top: 30px;
+  }
+}
