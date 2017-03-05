@@ -9,6 +9,7 @@ function AboutPage(props) {
     <div >
 
       <div className='about-img-div'>
+        
         <img src={profImg}
           alt={"profile"}
           className='img-prof-responsive' />

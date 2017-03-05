@@ -1,52 +1,54 @@
 .name-title {
-  font-family : 'Roboto', sans-serif;
-  text-align : center ;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
   font-weight: 300;
   font-size: 4em;
 }
 
 body {
-  font-family : 'Roboto', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .experience-inner {
-   width: 560px;
-   padding: 40px;
-   display:flex;
+  width: 560px;
+  padding: 40px;
+  display: flex;
 }
 
 .experience-paper {
-  width : 640px;
+  width: 640px;
   margin-bottom: 15px;
 }
+
 .experience-main {
-  font-weight : 300;
+  font-weight: 300;
 }
 
-.experience-left{
-  width : 30%;
+.experience-left {
+  width: 30%;
 }
 
 .experience-right {
-  width : 70%;
-  float : right;
+  width: 70%;
+  float: right;
 }
 
 .experience-title {
   font-size: 1.5em;
-  font-weight : 400;
+  font-weight: 400;
   text-align: center;
 }
 
 .experience-company {
   font-size: 3.5em;
-  font-weight: 300; 
+  font-weight: 300;
   text-align: center;
 }
+
 .experience-date {
   font-weight: 400;
   font-size: 1.2em;
-  color : gray;
+  color: gray;
 }
 
 .experience-description {
@@ -64,84 +66,21 @@ body {
   justify-content: center;
 }
 
-.resume-section-header {
-  display: inline-block;
-  width: 100%;
-  font-size: 3.5em;
-  text-align: left;
-  margin: 0px;
-  margin-bottom: 30px;
-  color: #00BCD4;
-  font-weight: 300;
-  border-bottom: 3px solid #00BCD4;
-
-}
-
 .side-paper-main {
   width: 330px;
   margin: auto;
   display: inline-block;
   float: right;
   font-weight: 300;
-  padding : 30px;
+  padding: 30px;
   margin-bottom: 10px;
 }
 
-.resume-left-pane {
-  width: 100px;
-}
-
-.resume-right-pane {
-  width: 330px;
-  float: right;
-  display : inline-block;
-}
-
-.resume-skills-p {
-    color : white;
-    font-size: 1.2em;
-    margin-top: 20px
-}
-.resume-skills-header {
-  font-size: 2em;
-  color : #006775;
-  font-weight: 500;
-  margin : -10px auto;
-
-}
-
-.resume-skill-table tr{
-  color : white;
-  font-size: 1em;
-  text-align: left;
-}
-
-.resume-skill-table :hover {
-  font-size: 1.05em;
-}
-
-.resume-skill-table {
-  margin-top: 30px;
-  width: 100%;
-}
 
 .experience-additional {
-  color : gray;
+  color: gray;
   margin-top: 15px;
   opacity: 0.9;
-}
-
-
-.resume-additional-skills {
-  font-size : 1em;
-  margin-top: 30px;
-}
-
-.resume-contact-info {
-  margin-top: 30px;
-  font-size: 1em;
-  font-weight: 500;
-  color: white;
 }
 
 .about-page-main {
@@ -149,33 +88,15 @@ body {
   text-align: left;
 }
 
-.about-page-main a{
+.about-page-main a {
   color: #00BCD4;
   text-decoration: none;
 }
 
-.edu-title {
-  font-size: 1.6em;
-  /*font-family: Times, serif;*/
-}
-
 .edu-address {
-  /*font-family: Times, serif;*/
   font-size: 1em;
   font-weight: 300;
-  font-style: italic; 
-}
-
-
-.large-bold p{
-  font-size: 1em;
-  font-weight: 500;
-  color : white;
-}
-
-.large-bold {
-  margin-top : 30px;
-  margin-bottom : 0px;
+  font-style: italic;
 }
 
 .edu-course {

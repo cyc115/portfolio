@@ -5,15 +5,19 @@ import SideBlock from './SideBlock'
 import UnderConstruction from './UnderConstruction'
 import HoverablePaper from './HoverablePaper'
 import Footer from '../Footer'
-import { experiences} from '../../constants/PageConstants'
+import { experiences } from '../../constants/PageConstants'
 import SkillTags, { createSkillSet } from './SkillTags'
 import Education from './Education'
+import './ResumePage.css'
 
 
 class ResumePage extends React.Component {
   render() {
     return (
       <div>
+
+        {/* background */}
+
         <section>
           <p className='resume-section-header'>{'Background'}</p>
 
@@ -28,8 +32,10 @@ class ResumePage extends React.Component {
 
         </section>
 
+        {/* Experience */}
+
         <section>
-          <br/>
+          <br />
           <p className='resume-section-header'>{'Experiences'}</p>
           {/*float right pane*/}
 
@@ -42,7 +48,7 @@ class ResumePage extends React.Component {
 
           <div className='resume-left-pane'>
             {
-              experiences.map((exp,idx) => {
+              experiences.map((exp, idx) => {
 
                 //remap experiences to the content 
                 let content = {
@@ -56,8 +62,8 @@ class ResumePage extends React.Component {
 
                 return (
                   <Experiences
-                    className='experience-block'
-                    content={content} key={idx}/>
+                    content={content} key={idx}
+                  />
                 )
               })
             }
@@ -100,9 +106,9 @@ export const LanguageSection = (props) => {
         {' LANGUAGES'}
       </p>
       <div className='large-bold'>
-        <p>English</p>
-        <p>French</p>
-        <p>Mandarin</p>
+        <p>ENGLISH</p>
+        <p>FRENCH</p>
+        <p>MANDARIN</p>
       </div>
     </SideBlock>
   )
@@ -113,10 +119,10 @@ export const LanguageSection = (props) => {
  */
 function generateStars(str) {
   let full = Array.apply(null, { length: str }).map(
-    (v, idx) => <i className='fa fa-star' key={idx}/>
+    (v, idx) => <i className='fa fa-star' key={idx} />
   )
   let empty = Array.apply(null, { length: 5 - str }).map(
-    (v,idx) => <i className='fa fa-star-o' key={-idx-1}/>
+    (v, idx) => <i className='fa fa-star-o' key={-idx - 1} />
   )
   return full.concat(empty)
 }

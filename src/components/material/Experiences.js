@@ -24,7 +24,7 @@ class Experiences extends React.Component {
 
     return (
       <HoverablePaper 
-        className='experience-paper'
+        className='experience-paper experience-block'
       >
         <div 
           className='experience-main'

@@ -1,0 +1,70 @@
+.resume-section-header {
+  display: inline-block;
+  width: 100%;
+  font-size: 3.5em;
+  text-align: left;
+  margin: 0px;
+  margin-bottom: 30px;
+  color: #00BCD4;
+  font-weight: 300;
+  border-bottom: 3px solid #00BCD4;
+}
+
+.resume-left-pane {
+  width: 100px;
+}
+
+.resume-right-pane {
+  width: 330px;
+  float: right;
+  display: inline-block;
+}
+
+.edu-title {
+  font-size: 1.6em;
+}
+
+.large-bold {
+  margin-top: 30px;
+  margin-bottom: 0px;
+}
+
+.large-bold p {
+  font-size: 1em;
+  font-weight: 700;
+  color: white;
+}
+
+.resume-skills-header {
+  font-size: 2em;
+  color: #006775;
+  font-weight: 500;
+  margin: -10px auto;
+}
+
+.resume-skill-table tr {
+  color: white;
+  font-size: 1em;
+  text-align: left;
+}
+
+.resume-skill-table:hover {
+  font-size: 1.05em;
+}
+
+.resume-skill-table {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.resume-additional-skills {
+  font-size: 1em;
+  margin-top: 30px;
+}
+
+.resume-contact-info {
+  margin-top: 30px;
+  font-size: 1em;
+  font-weight: 500;
+  color: white;
+}
