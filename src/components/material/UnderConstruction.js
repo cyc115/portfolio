@@ -6,6 +6,7 @@ const UnderConstruction = (props) => {
     <SideBlock paperStyle={{
       marginBottom: '10px'
     }}
+    className='under-construction'  
     >
 
       <h1 style={{

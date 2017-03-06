@@ -1,0 +1,17 @@
+.show-case-container {
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+.port-showcase-card {
+   margin: 10px;
+   margin-bottom: 10px;
+}
+
+@media (max-width : 375px) {
+  .show-case-item{
+    margin : 0px -20px 0px 0px;
+    margin-bottom: 10px;
+  }
+}
+

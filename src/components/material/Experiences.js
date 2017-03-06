@@ -37,9 +37,7 @@ class Experiences extends React.Component {
               {content.companyName}
             </span>
 
-            <p
-              className='experience-additional'
-            >
+            <p className='experience-additional'>
               {content.additionalLine}
             </p>
             {/*spent time*/}

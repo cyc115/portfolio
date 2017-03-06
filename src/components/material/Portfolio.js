@@ -5,6 +5,7 @@ import FlatButton from 'material-ui/FlatButton'
 import './portfolio.css'
 import { portfolio } from '../../constants/PageConstants'
 import placeHolder from '../../../public/img/placeholder.png'
+import './Portfolio.css'
 
 class Portfolio extends React.Component {
 
@@ -59,9 +60,7 @@ function generateShowCase() {
           description={v.description}
           linkText={v.linkText}
           link={v.link}
-          style={{
-            marginRight: '30px',
-          }}
+          className='show-case-item'
         />
       })}
     </div>
