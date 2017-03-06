@@ -3,7 +3,7 @@
   width: 100%;
   font-size: 3.5em;
   text-align: left;
-  margin: 0px;
+  margin-top: 10px;
   margin-bottom: 30px;
   color: #00BCD4;
   font-weight: 300;
@@ -14,16 +14,36 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .resume-left-pane {
-  width: 500px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 640px;
 }
 
 .resume-right-pane {
   width: 330px;
-  float: right;
-  display: inline-block;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: flex-start;
+  margin-left: 10px;
+
+}
+
+.resume-right-pane .side-paper-main, .resume-left-pane > *{
+  margin-bottom: 10px;
+}
+
+
+.side-paper-main {
+  width: 330px;
+  margin: auto;
+  font-weight: 300;
+  padding: 30px;
 }
 
 .edu-title {
@@ -73,4 +93,30 @@
   font-size: 1em;
   font-weight: 500;
   color: white;
+}
+
+
+/* smaller than tablet */
+
+@media (max-width: 768px) {
+  .resume-right-pane {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .resume-left-pane {
+    width: 100%;
+  }
+
+  .side-paper-main {
+    margin-bottom: 10px;
+    width: 640px;
+  }
+}
+
+@media (max-width : 425px) {
+  
+  .resume-section-header {
+    text-align: center;
+
+  }
 }

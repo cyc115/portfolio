@@ -11,7 +11,6 @@ class Experiences extends React.Component {
         className='edu-main'
         paperStyle={{
           padding: '30px',
-//          height: '230px'
         }}
       >
 

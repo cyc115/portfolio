@@ -9,78 +9,6 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-
-.experience-inner {
-  width: 560px;
-  padding: 40px;
-  display: flex;
-}
-
-
-
-.experience-main {
-  font-weight: 300;
-}
-
-.experience-left {
-  width: 30%;
-}
-
-.experience-right {
-  width: 70%;
-  float: right;
-}
-
-.experience-title {
-  font-size: 1.5em;
-  font-weight: 400;
-  text-align: center;
-}
-
-.experience-company {
-  font-size: 3.5em;
-  font-weight: 300;
-  text-align: center;
-}
-
-.experience-date {
-  font-weight: 400;
-  font-size: 1.2em;
-  color: gray;
-}
-
-.experience-description {
-  list-style-type: square;
-  list-style-position: outside;
-  text-align: left;
-}
-
-.experience-tags-headline {
-  margin-top: 30px;
-}
-
-.experience-tags {
-  align-content: center;
-  justify-content: center;
-}
-
-.side-paper-main {
-  width: 330px;
-  margin: auto;
-  display: inline-block;
-  float: right;
-  font-weight: 300;
-  padding: 30px;
-  margin-bottom: 10px;
-}
-
-
-.experience-additional {
-  color: gray;
-  margin-top: 15px;
-  opacity: 0.9;
-}
-
 .about-page-main {
   font-size: 1.1em;
   text-align: left;
@@ -100,4 +28,18 @@ body {
 .edu-course {
   font-weight: 500;
   font-size: 1.5em;
+}
+
+.paper {
+  width: auto;
+  padding: 50px;
+  margin : 10px;
+  text-align: center;
+  display: block;
+}
+
+@media (max-width : 425px) {
+  .paper {
+    padding: 0px;
+  }
 }

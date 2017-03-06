@@ -1,13 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
 
-const style = {
-  width: 'auto',
-  padding: 50,
-  margin: 10,
-  textAlign: 'center',
-  display: 'block'
-}
 /**
  * attributes :
  * {styles} : additional style used on <Paper>
@@ -19,7 +12,7 @@ class Page extends React.Component {
     let additionalStyles = this.props.styles || {}
 
     return (
-      <Paper style={{...style, ...additionalStyles}} zDepth={1}>
+      <Paper style={additionalStyles} zDepth={1} className='paper'>
         {this.props.children}
       </Paper>
     )

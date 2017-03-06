@@ -31,8 +31,9 @@
 @media (max-width: 1024px) {
   .about-img-div {
     height: auto;
+    padding: 30px;
   }
   .about-page-main {
-    margin: 30px -25px;
+    margin: 30px;
   }
 }

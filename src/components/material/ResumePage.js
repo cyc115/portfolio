@@ -33,8 +33,6 @@ class ResumePage extends React.Component {
               <LanguageSection />
             </div>
 
-
-
           </div>
 
         </section>
@@ -42,40 +40,44 @@ class ResumePage extends React.Component {
         {/* Experience */}
 
         <section>
-          <br />
           <p className='resume-section-header'>{'Experiences'}</p>
           {/*float right pane*/}
 
-          <div className='resume-right-pane'>
-            <ResumeSkills />
-            <AdditionalSkills />
-            <ContactMeResumeSection />
-            <UnderConstruction />
+          <div className='resume-flex-container'>
+
+
+
+            <div className='resume-left-pane'>
+              {
+                experiences.map((exp, idx) => {
+
+                  //remap experiences to the content 
+                  let content = {
+                    companyName: exp.companyName,
+                    additionalLine: exp.fullName,
+                    timeRange: exp.date,
+                    role: exp.role,
+                    description: exp.descriptions,
+                    skills: exp.skills.map(s => createSkillSet(s))
+                  }
+
+                  return (
+                    <Experiences
+                      content={content} key={idx}
+                    />
+                  )
+                })
+              }
+            </div>
+
+            <div className='resume-right-pane r-r-p'>
+              <ResumeSkills />
+              <AdditionalSkills />
+              <ContactMeResumeSection />
+              <UnderConstruction />
+            </div>
+
           </div>
-
-          <div className='resume-left-pane'>
-            {
-              experiences.map((exp, idx) => {
-
-                //remap experiences to the content 
-                let content = {
-                  companyName: exp.companyName,
-                  additionalLine: exp.fullName,
-                  timeRange: exp.date,
-                  role: exp.role,
-                  description: exp.descriptions,
-                  skills: exp.skills.map(s => createSkillSet(s))
-                }
-
-                return (
-                  <Experiences
-                    content={content} key={idx}
-                  />
-                )
-              })
-            }
-          </div>
-
 
         </section>
       </div>
@@ -169,7 +171,6 @@ export const ResumeSkills = (props) => {
           </tr>
         </tbody>
       </table>
-
     </SideBlock>
   )
 }
