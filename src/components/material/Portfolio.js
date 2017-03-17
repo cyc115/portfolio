@@ -1,5 +1,5 @@
 import React from 'react'
-import {CardMedia, CardTitle, CardText} from 'material-ui/Card'
+import { CardMedia, CardTitle, CardText } from 'material-ui/Card'
 import HoverablePaper from './HoverablePaper'
 import FlatButton from 'material-ui/FlatButton'
 import './portfolio.css'
@@ -52,9 +52,9 @@ class Portfolio extends React.Component {
 function generateShowCase() {
   return (
     <div className='show-case-container'>
-      {portfolio.map((v,idx) => {
+      {portfolio.map((v, idx) => {
         return <ShowCase
-          key={idx}  
+          key={idx}
           src={v.imgSrc || placeHolder}
           title={v.title}
           description={v.description}

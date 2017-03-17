@@ -1,30 +1,32 @@
-✔ implement footer @done (2017-02-24, 12:51:28 AM)
+Main task list : 
+✔ implement footer @done (2017-02-24, 12:51:28 AM) @done (2017-03-17, 12:02:53 AM)
 ✔ implement responsive layout @done (2017-02-24, 3:44:56 PM)
-☐ design the resume page
+✔ design the resume page @done (2017-03-16, 11:59:32 PM)
   ✔ hover causes raise in paper @done (2017-02-25, 4:42:08 PM)
-  ☐ make small screen scale better 
+  ✔ make small screen scale better @done (2017-03-16, 11:59:22 PM)
   ✔ format card @done (2017-02-27, 3:34:22 PM)
   ✔ implement Education header @done (2017-02-28, 11:42:28 PM)
   ✔ implement my skills section @done (2017-02-27, 3:34:28 PM)
 ✔ refactor Experience into Experience and hoverablePaper @done (2017-02-26, 11:44:21 AM)
+✔ contact me page @done (2017-02-28, 11:42:18 PM)
+✔ write up @done (2017-03-17, 12:06:01 AM)
+  ✔ write up the about page @done (2017-02-28, 11:42:15 PM)
 
-☐ footer
+✔ deployment @done (2017-03-17, 12:07:26 AM)
+  ✔ figure out a way to wake up app @done (2017-02-28, 11:42:09 PM)
+  ✔ make mobile friendly @done (2017-03-17, 12:06:43 AM)
+  ✔ add visitor analytics @done (2017-02-28, 11:42:03 PM)
+
+☐ email page @enhancement
+  ☐ implement backend to use mailgun.
+  ☐ better input validation
+
+☐ implement footer
   ☐ message 
   ☐ contact info ( phone, email) 
   ☐ links to profiles
   ☐ phone icon in the footer should pop up a dialog with scannable v_card info
 
-✔ contact me page @done (2017-02-28, 11:42:18 PM)
-☐ implement a live chat app @enhancement
-
-☐ write up
-  ✔ write up the about page @done (2017-02-28, 11:42:15 PM)
-
-☐ deployment 
-  ✔ figure out a way to wake up app @done (2017-02-28, 11:42:09 PM)
-  ☐ make mobile friendly 
-  ✔ add visitor analytics @done (2017-02-28, 11:42:03 PM)
-
-☐ email page
-  ☐ implement backend to use mailgun.
-  ☐ better input validation
+☐ add heatmap to track viewer focus
+☐ optimize loading speed
+☐ optimize drop frame
