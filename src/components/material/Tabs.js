@@ -25,9 +25,9 @@ class TabsContainer extends React.Component {
     ]
   }
 
-/**
- * Update the state when tab index needed to be changed
- */  
+  /**
+   * Update the state when tab index needed to be changed
+   */
   handleChangeIndex = (v) => {
     this.setState({
       ...this.state,
@@ -44,28 +44,10 @@ class TabsContainer extends React.Component {
 
   render() {
 
-    let about = <div></div>
-    let resume = <div></div>
-    let portfolio = <div></div>
-    let email = <div></div>
-
-    switch (this.state.slideIndex) {
-      default:
-      case 0:
-        about = <AboutPage/>
-        break;
-      case 1:
-        resume = <ResumePage/>
-        break;
-
-      case 2:
-        portfolio = <Portfolio/>
-        break;
-
-      case 3:
-        email = <EmailPage/>
-        break;
-    }
+    let about = <AboutPage />
+    let resume = <ResumePage />
+    let portfolio = <Portfolio />
+    let email = <EmailPage />
 
     return (
       <div>
@@ -79,19 +61,19 @@ class TabsContainer extends React.Component {
           index={this.state.slideIndex}
           onChangeIndex={this.handleChangeIndex} >
 
-          <Page>
+          <Page styles={{ display: this.state.slideIndex == 0 ? '' : 'none' }}>
             {about}
           </Page>
 
-          <Page>
+          <Page styles={{ display: this.state.slideIndex == 1 ? '' : 'none' }}>
             {resume}
           </Page>
 
-          <Page>
+          <Page styles={{ display: this.state.slideIndex == 2 ? '' : 'none' }}>
             {portfolio}
           </Page>
 
-          <Page>
+          <Page styles={{ display: this.state.slideIndex == 3 ? '' : 'none' }}>
             {email}
           </Page>
 

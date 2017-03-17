@@ -28,5 +28,8 @@ Main task list :
   ☐ phone icon in the footer should pop up a dialog with scannable v_card info
 
 ☐ add heatmap to track viewer focus
+☐ make Android browser to have the same color theme as the site 
 ☐ optimize loading speed
-☐ optimize drop frame
+  ☐ split the webpack boundle into multiple parts  
+☐ optimize drop frames : lazy load ? 
+☐ add react-rout
