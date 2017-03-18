@@ -31,5 +31,5 @@ Main task list :
 ☐ make Android browser to have the same color theme as the site 
 ☐ optimize loading speed
   ☐ split the webpack boundle into multiple parts  
-☐ optimize drop frames : lazy load ? 
+☐ optimize drop frames : lazy load @in-processd
 ☐ add react-rout

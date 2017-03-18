@@ -1,5 +1,6 @@
 import React from 'react'
 import Paper from 'material-ui/Paper'
+import LazyLoad from 'react-lazyload'
 
 class HoverablePaper extends React.Component {
   constructor(props) {
@@ -26,17 +27,21 @@ class HoverablePaper extends React.Component {
 
 
   render() {
-    return (<Paper
-      style={this.props.paperStyle}
-      zDepth={this.state.zDepth}
-      onMouseEnter={this.onMouseEnter}
-      onMouseLeave={this.onMouseLeave}
-      onTouchStart={this.onMouseEnter}
-      onTouchEnd={this.onMouseLeave}
-      className={`hoverable-paper ${this.props.className}`}
-    >
-    {this.props.children}
-    </Paper>)
+    return (
+      <LazyLoad>
+        <Paper
+          style={this.props.paperStyle}
+          zDepth={this.state.zDepth}
+          onMouseEnter={this.onMouseEnter}
+          onMouseLeave={this.onMouseLeave}
+          onTouchStart={this.onMouseEnter}
+          onTouchEnd={this.onMouseLeave}
+          className={`hoverable-paper ${this.props.className}`}
+        >
+          {this.props.children}
+        </Paper>
+      </LazyLoad>
+    )
   }
 
 }
