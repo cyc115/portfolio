@@ -28,7 +28,7 @@ class HoverablePaper extends React.Component {
 
   render() {
     return (
-      <LazyLoad>
+      <LazyLoad once={true}>
         <Paper
           style={this.props.paperStyle}
           zDepth={this.state.zDepth}
