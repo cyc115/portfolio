@@ -61,19 +61,19 @@ class TabsContainer extends React.Component {
           index={this.state.slideIndex}
           onChangeIndex={this.handleChangeIndex} >
 
-          <Page styles={{ display: this.state.slideIndex == 0 ? '' : 'none' }}>
+          <Page styles={{ display: this.state.slideIndex === 0 ? '' : 'none' }}>
             {about}
           </Page>
 
-          <Page styles={{ display: this.state.slideIndex == 1 ? '' : 'none' }}>
+          <Page styles={{ display: this.state.slideIndex === 1 ? '' : 'none' }}>
             {resume}
           </Page>
 
-          <Page styles={{ display: this.state.slideIndex == 2 ? '' : 'none' }}>
+          <Page styles={{ display: this.state.slideIndex === 2 ? '' : 'none' }}>
             {portfolio}
           </Page>
 
-          <Page styles={{ display: this.state.slideIndex == 3 ? '' : 'none' }}>
+          <Page styles={{ display: this.state.slideIndex === 3 ? '' : 'none' }}>
             {email}
           </Page>
 

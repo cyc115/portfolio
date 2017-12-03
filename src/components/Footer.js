@@ -16,7 +16,7 @@ const footerStyle = {
   marginTop: '25px',
   float: 'bottom'
 }
-
+// Footer component is the rows of floating icons on the bottom of the page
 class Footer extends React.Component {
   constructor(props) {
     super(props)
@@ -29,6 +29,7 @@ class Footer extends React.Component {
     ]
   }
 
+  // creates a floating icon button (eg. linkedin , fb button )
   createSiteObject(iconName, url = '') {
     return {
       name: iconName,
@@ -36,6 +37,7 @@ class Footer extends React.Component {
     }
   }
 
+  // create an icon and apply style 
   createIcon(icon, style) {
     return (
       <a
@@ -51,6 +53,9 @@ class Footer extends React.Component {
     )
   }
 
+  // renders the footer section
+  // allow the style of the container div to be overriden
+  // allow the icon styles to be overriden 
   render() {
     const { style = {}, iconS = {} } = this.props
 
