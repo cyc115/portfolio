@@ -19,5 +19,5 @@
 }
 
 .port-showcase-card:nth-child(2n) {
-  background-color: #00BCD4 !important;
+  background-color: rgb(255, 255, 255) !important;
 }

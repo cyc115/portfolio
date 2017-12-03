@@ -6,7 +6,7 @@ import SwipeableViews from 'react-swipeable-views'
 import Page from './Page'
 import AboutPage from './AboutPage'
 import ResumePage from './ResumePage'
-import EmailPage from './EmailPage'
+//import EmailPage from './EmailPage'
 import Portfolio from './Portfolio'
 
 class TabsContainer extends React.Component {
@@ -21,7 +21,7 @@ class TabsContainer extends React.Component {
       'ABOUT',
       'RESUME',
       'PORTFOLIO',
-      'CONTACT'
+      'BLOG'
     ]
   }
 
@@ -44,11 +44,6 @@ class TabsContainer extends React.Component {
 
   render() {
 
-    let about = <AboutPage />
-    let resume = <ResumePage />
-    let portfolio = <Portfolio />
-    let email = <EmailPage />
-
     return (
       <div>
         <Tabs
@@ -62,21 +57,21 @@ class TabsContainer extends React.Component {
           onChangeIndex={this.handleChangeIndex} >
 
           <Page styles={{ display: this.state.slideIndex === 0 ? '' : 'none' }}>
-            {about}
+            <AboutPage/>
           </Page>
 
           <Page styles={{ display: this.state.slideIndex === 1 ? '' : 'none' }}>
-            {resume}
+            <ResumePage/>
           </Page>
 
           <Page styles={{ display: this.state.slideIndex === 2 ? '' : 'none' }}>
-            {portfolio}
+            <Portfolio/>
           </Page>
-
+{/* 
           <Page styles={{ display: this.state.slideIndex === 3 ? '' : 'none' }}>
-            {email}
+            <EmailPage/>
           </Page>
-
+ */}
         </SwipeableViews>
       </div>
     )
