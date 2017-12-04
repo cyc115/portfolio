@@ -3,6 +3,7 @@ import HoverablePaper from './HoverablePaper'
 import McGillLogo from '../../../public/img/McGill.png'
 import './Education.css'
 
+// Education card 
 class Experiences extends React.Component {
 
   render() {

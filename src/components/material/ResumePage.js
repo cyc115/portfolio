@@ -1,5 +1,5 @@
 import React from 'react'
-
+import FontAwesome from 'react-fontawesome'
 import Experiences from './Experiences'
 import SideBlock from './SideBlock'
 import UnderConstruction from './UnderConstruction'
@@ -128,14 +128,15 @@ export const LanguageSection = (props) => {
  */
 function generateStars(str) {
   let full = Array.apply(null, { length: str }).map(
-    (v, idx) => <i className='fa fa-star' key={idx} />
+    (v, idx) => <FontAwesome className='fa fa-star' name="star" key={idx} />
   )
   let empty = Array.apply(null, { length: 5 - str }).map(
-    (v, idx) => <i className='fa fa-star-o' key={-idx - 1} />
+    (v, idx) => <FontAwesome className='fa fa-star-o' name="star" key={-idx - 1} />
   )
   return full.concat(empty)
 }
 
+// my top skills 
 export const ResumeSkills = (props) => {
 
   return (
@@ -207,7 +208,7 @@ export const ContactMeResumeSection = () => {
   return (
     <SideBlock>
       <p className='resume-skills-header'>
-        <i className='fa fa-id-card' />
+        <FontAwesome name='fa fa-id-card'  />
         {' CONTACT ME'}
       </p>
 

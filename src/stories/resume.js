@@ -10,6 +10,8 @@ import { ResumeSkills } from '../components/material/ResumePage'
 import Education from '../components/material/Education'
 import Portfolio from '../components/material/Portfolio'
 
+let fontAwesome = '<script async src="https://use.fontawesome.com/74d63af068.js"></script>'
+
 storiesOf('resume', module)
 
   .add('resume page', () => {
