@@ -1,7 +1,13 @@
 {
-  "main.css": "static/css/main.3bca927a.css",
-  "main.css.map": "static/css/main.3bca927a.css.map",
-  "main.js": "static/js/main.b2e8d2e0.js",
-  "main.js.map": "static/js/main.b2e8d2e0.js.map",
-  "static/media/profile.jpg": "static/media/profile.03c70f7e.jpg"
+  "main.css": "static/css/main.92d7f70c.css",
+  "main.css.map": "static/css/main.92d7f70c.css.map",
+  "main.js": "static/js/main.6d5a66b9.js",
+  "main.js.map": "static/js/main.6d5a66b9.js.map",
+  "static/media/McGill.png": "static/media/McGill.2f8b94ea.png",
+  "static/media/dpm.jpg": "static/media/dpm.26eb5442.jpg",
+  "static/media/eat-this.jpg": "static/media/eat-this.32ba35b3.jpg",
+  "static/media/logger.jpg": "static/media/logger.645465e1.jpg",
+  "static/media/noter.jpg": "static/media/noter.055c3ddd.jpg",
+  "static/media/prof.jpg": "static/media/prof.f5f8ba8c.jpg",
+  "static/media/profile.jpg": "static/media/profile.bcebd4ff.jpg"
 }

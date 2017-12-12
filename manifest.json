@@ -1,0 +1,14 @@
+{
+  "lang" : "en",
+  "name": "Mike Chen",
+  "icons": [
+    {
+      "src": "./faviconBig.png",
+      "size": "144x144",
+      "type": "image/png"
+    }
+  ], 
+"display" : "fullscreen",
+"background_color" : "#00BCD4",
+"theme_color" : "#00BCD4"
+}
