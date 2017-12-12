@@ -1,96 +1,110 @@
-import * as colors from 'material-ui/styles/colors'
+import * as colors from "material-ui/styles/colors";
 export const menuText = [
   {
-    "text": "ABOUT",
-    "url": "#"
+    text: "ABOUT",
+    url: "#"
   },
   {
-    "text": "PORTFOLIO",
-    "url": "#"
+    text: "PORTFOLIO",
+    url: "#"
   },
   {
-    "text": "Link 2",
-    "url": "#",
-    "submenu": [
+    text: "Link 2",
+    url: "#",
+    submenu: [
       {
-        "text": "Sublink 1",
-        "url": "#",
-        "submenu": [
+        text: "Sublink 1",
+        url: "#",
+        submenu: [
           {
-            "text": "SubSublink 1",
-            "url": "#"
+            text: "SubSublink 1",
+            url: "#"
           }
         ]
       },
       {
-        "text": "Sublink 2",
-        "url": "#",
-        "submenu": [
+        text: "Sublink 2",
+        url: "#",
+        submenu: [
           {
-            "text": "SubSublink 2",
-            "url": "#"
+            text: "SubSublink 2",
+            url: "#"
           }
         ]
       }
     ]
   }
-]
+];
 
 export const experiences = [
   {
-    companyName: 'MCIN',
-    fullName: 'McGill Center for Integrative Neuroscience',
-    role: 'PHP developer (intern)',
-    date: 'May 16 - Sep 16',
+    companyName: "Motorola Solutions",
+    fullName: "CTO office",
+    role: "Software Security Engineer",
+    date: "Apr 17 - now",
+    descriptions: [
+      `First author of voice authentication replay attack prevention patent disclosure`,
+      `Led the design & development of an internal container secret management solution`, 
+      `Engage in cross team collaboration and provide guidance related to container security and secret management best practices`, 
+      `Develop and contribute to upstream docker opensource project (notary)`,
+      `Design and develop docker image security related project within Motorola`, 
+      `Implement and maintain web services in nodejs`
+
+    ],
+    skills: ["GoLang", "AWS", "Docker", "Nodejs"]
+  },
+  {
+    companyName: "MCIN",
+    fullName: "McGill Center for Integrative Neuroscience",
+    role: "PHP developer (intern)",
+    date: "May 16 - Sep 16",
     descriptions: [
       `While working at MCIN I was responsible for maintaining and implementing business logic on the Loris platform.`,
       `I was also responsible for writing QA tests and refactoring legacy code based on Object oriented design principles.`
     ],
-    skills: ['PHP', 'Quality Assurance']
-  }, {
-    companyName: 'RTeR',
-    fullName: 'Real-time emergency Response',
+    skills: ["PHP", "Quality Assurance"]
+  },
+  {
+    companyName: "RTeR",
+    fullName: "Real-time emergency Response",
     role: `Developer`,
-    date: 'Sep 15 - May 16',
+    date: "Sep 15 - May 16",
     descriptions: [
       `Implemented an augmented reality app with Unity on the Epson Moverio headset that facilitate communication among firefighters and the command. The app provides a platform to access building plans, real-time location tracking and enables location sharing via interactive markers.`,
-      'Developed and maintained an mock sensor Android application to facilitate the development of the AR app.',
-      'Maintain and update existing SQL database and server written in GoLang.'
+      "Developed and maintained an mock sensor Android application to facilitate the development of the AR app.",
+      "Maintain and update existing SQL database and server written in GoLang."
     ],
-    skills: [
-      'Android', 'GoLang', 'C#'
-    ]
-  }, {
-    companyName: 'Startup',
-    fullName: '',
+    skills: ["Android", "GoLang", "C#"]
+  },
+  {
+    companyName: "Startup",
+    fullName: "",
     role: `Project Manager, Developer`,
-    date: 'Feb 15 - Dec 15',
+    date: "Feb 15 - Dec 15",
     descriptions: [
       `Managed and developed a FDA electronic application prototype to facilitate the FDA drug  application process.`,
       `Responsible for managing a team of 4 developers and communicating with the client.`,
       `Developed the application in C# and .Net`
     ],
-    skills: [
-      'C#', '.Net', 'WPF'
-    ]
-  }, {
-    companyName: 'PTC',
-    fullName: '',
+    skills: ["C#", ".Net", "WPF"]
+  },
+  {
+    companyName: "PTC",
+    fullName: "",
     date: `May 14 - Sep 15`,
-    role: 'Software Engineer intern',
+    role: "Software Engineer intern",
     descriptions: [
       `Developed mobile and web application prototypes for various projects.`,
       `Responsible for developing an AR prototype on Android as the front end to an online storage management platform.`,
       `Prototypes developed on Android, IOS and web(Nodejs) and some were presented to clients and customers at the PTC Liveworx conference.`
     ],
-    skills: [
-      'Android', 'Javascript', 'Nodejs', 'IOS'
-    ]
-  }, {
-    companyName: 'DPM',
-    fullName: 'school project : Autonomous Navigation Robot',
+    skills: ["Android", "Javascript", "Nodejs", "IOS"]
+  },
+  {
+    companyName: "DPM",
+    fullName: "school project : Autonomous Navigation Robot",
     role: `Lead developer, Project manager`,
-    date: 'Jan 14 - May 14',
+    date: "Jan 14 - May 14",
     descriptions: [
       `Led and managed a semester long project to design and develop an robot capable of autonomously navigate through a unknown field of obstacles. The robot is required to navigate to a location to collect a colored box among many boxes then carry it to a dedicated drop zone within time limit.`,
       `Responsible for optimizing the design of the software architecture to prioritize real-time modules such as sensor and navigation.`,
@@ -99,97 +113,96 @@ export const experiences = [
       `Finished first place in the final competition.`
     ],
     skills: [
-      'Java', 'concurrency', 'Gantt chart', 'Agile methodologies', 'Project management'
+      "Java",
+      "concurrency",
+      "Gantt chart",
+      "Agile methodologies",
+      "Project management"
     ]
   },
   {
-    companyName: 'BCL',
-    fullName: 'McGill Broadband Communication Lab',
+    companyName: "BCL",
+    fullName: "McGill Broadband Communication Lab",
     role: `PHP Developer`,
-    date: 'Sep 12 - Jan 14',
+    date: "Sep 12 - Jan 14",
     descriptions: [
       `Maintain and developed UI using Javascript, HTML and CSS and back end using PHP.`,
-      'Analyzed data generated by the real time localization system with matlab, bash, and java.',
-      'Presented the result at McGill hosted conferences.'
+      "Analyzed data generated by the real time localization system with matlab, bash, and java.",
+      "Presented the result at McGill hosted conferences."
     ],
-    skills: [
-      'Javascript',
-      'CSS',
-      'HTML',
-      'bash',
-      'Java',
-      'PHP',
-    ]
+    skills: ["Javascript", "CSS", "HTML", "bash", "Java", "PHP"]
   }
-]
+];
 
 export const skillColors = {
-  'Android': colors.lightGreen200,
-  'IOS': colors.blueGrey200,
-  'Javascript': colors.deepOrange200,
-  'Nodejs': colors.green200,
-  'PHP': colors.indigo200,
-  'GoLang': colors.lightBlue200,
-  'C#': colors.deepPurple200,
-  '.Net': colors.purple200,
-  'WPF': colors.blue200,
-  'CSS': colors.blue200,
-  'HTML': colors.deepOrange200,
-  'Java': colors.blue200,
-  'bash': colors.brown200,
-  'Linux': colors.teal200,
-  'Git': colors.brown200,
-}
+  Android: colors.lightGreen200,
+  AWS: colors.orange200,
+  Docker: colors.lightBlue200,
+  IOS: colors.blueGrey200,
+  Javascript: colors.deepOrange200,
+  Nodejs: colors.green200,
+  PHP: colors.indigo200,
+  GoLang: colors.lightBlue200,
+  "C#": colors.deepPurple200,
+  ".Net": colors.purple200,
+  WPF: colors.blue200,
+  CSS: colors.blue200,
+  HTML: colors.deepOrange200,
+  Java: colors.blue200,
+  bash: colors.brown200,
+  Linux: colors.teal200,
+  Git: colors.brown200
+};
 
-import dpm from '../../public/img/dpm.jpg'
-import eatThis from '../../public/img/eat-this.jpg'
-import logger from '../../public/img/logger.jpg'
-import noter from '../../public/img/noter.jpg'
-import prof from '../../public/img/prof.jpg'
-
+import dpm from "../../public/img/dpm.jpg";
+import eatThis from "../../public/img/eat-this.jpg";
+import logger from "../../public/img/logger.jpg";
+import noter from "../../public/img/noter.jpg";
+import prof from "../../public/img/prof.jpg";
 
 export const portfolio = [
-    {
+  {
     imgSrc: prof,
-    title: 'Personal profile website',
-    description: 'Built with Node + React + Redux + Mongo',
-    link: 'https://github.com/cyc115/portfolio',
-    linkText: 'GITHUB',
+    title: "Personal profile website",
+    description: "Built with Node + React + Redux + Mongo",
+    link: "https://github.com/cyc115/portfolio",
+    linkText: "GITHUB"
   },
   {
     imgSrc: logger,
-    title: 'A computer usage Logger',
-    description: 'Monitor computer usage and push the gathered usage data to airtable',
-    link: 'https://github.com/cyc115/computerUsageLogger',
-    linkText: 'GITHUB',
+    title: "A computer usage Logger",
+    description:
+      "Monitor computer usage and push the gathered usage data to airtable",
+    link: "https://github.com/cyc115/computerUsageLogger",
+    linkText: "GITHUB"
   },
   {
     imgSrc: noter,
-    title: 'Noter : Markdown Editor',
-    description: 'A simple, easy to use note taking application.',
-    link: 'https://github.com/cyc115/noter',
-    linkText: 'GITHUB',
+    title: "Noter : Markdown Editor",
+    description: "A simple, easy to use note taking application.",
+    link: "https://github.com/cyc115/noter",
+    linkText: "GITHUB"
   },
   {
     imgSrc: dpm,
-    title: 'DPM class project',
-    description: 'Autonomous navigation robot implemented with LEGO mindstorm',
-    link: 'https://github.com/cyc115/Autonomous-Navigation-Robot',
-    linkText: 'GITHUB',
+    title: "DPM class project",
+    description: "Autonomous navigation robot implemented with LEGO mindstorm",
+    link: "https://github.com/cyc115/Autonomous-Navigation-Robot",
+    linkText: "GITHUB"
   },
   {
     imgSrc: eatThis,
-    title: 'Eat this Climbers',
-    description: 'A Game made for the Viking lovers during the two day McGameHack.',
-    link: 'https://github.com/cyc115/McGameHack',
-    linkText: 'GITHUB',
+    title: "Eat this Climbers",
+    description:
+      "A Game made for the Viking lovers during the two day McGameHack.",
+    link: "https://github.com/cyc115/McGameHack",
+    linkText: "GITHUB"
   },
-    {
-    imgSrc: '',
-    title: 'Voice Assistant for Android',
+  {
+    imgSrc: "",
+    title: "Voice Assistant for Android",
     description: `proof of concept of an Android voice Assistant app allowing the user to call, text message contacts and perform other simple tasks without having to pull out their phone from their pocket.`,
-    link: 'https://github.com/cyc115/VoiceAssistant',
-    linkText: 'GITHUB',
-  },
-
-]
+    link: "https://github.com/cyc115/VoiceAssistant",
+    linkText: "GITHUB"
+  }
+];
