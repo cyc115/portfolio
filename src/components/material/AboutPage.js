@@ -18,10 +18,10 @@ function AboutPage(props) {
 function generateContent() {
   return (
     <div className="about-page-main">
-      <p>
+      <Markdown>
         Hi! My name is Mike. Graduated from [McGill](https://www.mcgill.ca), I
         am a security engineer by trade, and a software engineer at heart.
-      </p>
+      </Markdown>
       <Markdown>
         For the past year, I have joined Motorola Solutions as a Security
         engineer specialized in application security and Golang development.
